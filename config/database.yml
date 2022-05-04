@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   database: gpv9_production
-  username: myapp
+  username: gpv9
   password: <%= ENV["GPV9_DATABASE_PASSWORD"] %>
   
