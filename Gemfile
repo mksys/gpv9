@@ -37,9 +37,9 @@ gem 'devise'
 
 gem 'kaminari'
 
-gem 'newrelic_rpm'
+#gem 'newrelic_rpm'
 
-gem 'scout_apm'
+#gem 'scout_apm'
 
 
 # Use Redis adapter to run Action Cable in production
