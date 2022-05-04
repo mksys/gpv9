@@ -7,4 +7,5 @@ git commit -m "new files"
 git push heroku main
 #git push -u heroku --all
 git push
-git push heroku main
+#git push heroku main
+git push -u origin main
