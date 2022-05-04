@@ -1,0 +1,2 @@
+module CurrentRacesHelper
+end

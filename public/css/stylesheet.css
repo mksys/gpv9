@@ -1,0 +1,1140 @@
+/* @override 
+	http://fonts.googleapis.com/css?* */
+
+/* Overide */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td
+{
+	margin: 0;
+	padding: 0px;
+	border: 0;
+	outline: 0;
+/*	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: top;*/
+}
+body {
+font-family: 'Roboto';
+font-weight:300;
+	padding: 20px;
+	background: #EEE;
+	color: #666666;
+	line-height: 1;
+}
+.content {
+		width: 95%;
+		margin: auto;
+		/*margin-right: 10px;*/
+		padding: 0px;
+}
+.multicolumn {
+	column-width: 27em;
+	column-gap: 3em;
+	
+}
+ol,
+ul
+{
+	list-style: none;
+}
+table
+{
+	border-collapse: separate;
+	border-spacing: 0;
+}
+.clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.wsw-story {
+	display: block;
+	clear: both;
+}
+
+div.homepage-grid {
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	/*grid-template-rows: 50px;
+	*/align-items: start;
+	/*grid-template-rows: repeat(auto, minmax(100px, 305px));*/
+	grid-auto-rows: minmax (100px, 300px);
+/*	grid-auto-flow: row;*/
+	grid-gap: 20px;
+/*	height: fit-content;*/
+	padding-bottom: 20px;
+
+}
+div.homepage-grid2 {
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/*	grid-template-rows: 50px;*/
+	align-items: start;
+	grid-template-rows: repeat(auto, minmax(100px, 305px));
+/*	grid-auto-rows: minmax (300px, 300px);*/
+/*	grid-auto-flow: row;*/
+	grid-gap: 20px;
+/*	height: fit-content;*/
+	padding-bottom: 20px;
+
+}
+
+div.homepage-grid .home-boxes {
+	position: relative;
+	overflow-y: hidden;
+	
+}
+div.homepage-grid2 .home-boxes2 {
+	position: relative;
+	background-color: #fff;
+	float: right;
+/*	position: relative;
+	overflow-y: hidden;*/
+}
+div.homepage-grid2 .home-boxes2 img {
+	float: left;
+}
+div.homepage-grid .withthumbnail {
+/*	background-color: black;*/
+	grid-row: auto / span 3;
+}
+div.homepage-grid .twotall {
+/*	background-color: black;*/
+	grid-row: auto / span 2;
+}
+
+div.homepage-grid img {
+/*position: absolute;*/
+/*	width: 100%;*/
+/*display: block;*/
+/*max-width:300px;
+max-height:200px;*/
+/*top: 0;*/
+width: 100%;
+height: auto;
+/*z-index: 1;*/
+}
+
+span.homepage-overlay {
+	position: absolute;
+	background-color: rgba(255, 255, 255, .7);
+	/*background-color: white;*/
+	top: 0px;
+	left: 0px;
+/*	height: 100%;
+	  width: 100%;*/
+	
+/*	padding: 10px;*/
+}
+img.story {
+	align:left;
+/*		width: 300px;
+	height: 200px;
+*/
+/*	width: 100%;
+	height: auto;
+*/}
+img.display {
+		width: 100%;
+		height: auto;
+}
+div.homepage-grid div {
+/*	position: relative;*/
+/*	padding: 0.75em;*/
+}
+div.homepage-grid div {
+	padding: 0.0em;
+}
+
+.homepage-grid div {
+/*	background-color: #fcc0c0;*/
+	/*padding: 1.0em;*/
+	padding: 0em;
+/*	border: 1px solid #333;*/
+	overflow: auto;
+		background-color: #FFF;
+}
+.homepage-grid3 div {
+/*	background-color: #fcc0c0;*/
+	/*padding: 1.0em;*/
+	padding: 0em;
+	border: 1px solid #333;
+	overflow: auto;
+		background-color: #FFF;
+}
+
+/*.homepage-grid div:nth-child(1).racehub {
+	grid-column: 1/-1;
+		padding: 1.0em;
+	overflow: auto;
+}*/
+
+div.more-news {
+	padding: 0.75em;
+	grid-column: 1;
+	
+}
+.homepage-grid div .vas {
+	align-self: end;
+	font-size: 3em;
+	background-color: black;
+}
+
+.ad300x250 {
+	display:block;
+}
+.ad728x90 {
+	display: none;
+}
+
+div.photo-gallery {
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	/*grid-template-rows: 50px;
+	*/
+	/*grid-template-rows: repeat(auto, minmax(100px, 305px));*/
+	grid-auto-rows: 100px;
+/*	grid-auto-flow: row;*/
+	grid-gap: 20px;
+/*	height: fit-content;*/
+	padding-bottom: 20px;
+	justify-content: center;
+	align-items: center;
+	
+}
+div.photo-gallery .photo {
+	/*background-color: black;*/
+	align-items: center;
+	justify-content: center;
+}
+div.photo-gallery a.tn {
+/*	align-items: center;
+	self-content: center;*/
+}
+div.photo-gallery2 {
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	/*grid-template-rows: 50px;
+	*/
+	/*grid-template-rows: repeat(auto, minmax(100px, 305px));*/
+	grid-auto-rows: 200px;
+/*	grid-auto-flow: row;*/
+	grid-gap: 20px;
+/*	height: fit-content;*/
+	padding-bottom: 20px;
+	justify-content: center;
+	align-items: center;
+	
+}
+div.photo-gallery2 .photo {
+	/*background-color: black;*/
+	align-items: center;
+	justify-content: center;
+}
+div.photo-gallery2 a.tn {
+/*	align-items: center;
+	self-content: center;*/
+}
+
+#columnfour {
+	display: none;
+}
+
+div.story-photo {
+	float: left;
+	padding-bottom: 0.0em;
+	padding-right: 1em;
+/*	margin-bottom: 2em;*/
+/*	background-color: #bbb;*/
+	
+}
+.story-photo-credits {
+	width:300px;
+	}
+.story-photo-caption {
+		font-size:60%;
+		float: left;
+		background-color: #888;
+		color: white;
+		padding: 5px;
+		border-radius: 4px;
+		/*background-color: red;
+	*/}
+div.story-photo-copyright {
+	font-size:60%;
+	float: right;
+	color: white;
+	padding: 5px;
+	background-color: #ccc;
+	color: #777;
+	border-radius: 16px;
+	/*background-color: blue;
+*/}
+.display-photo-caption {
+	font-size:100%;
+	float: left;
+	color: #777;
+	margin:5px;
+	padding: 5px;
+/*	background-color: #ccc;*/
+	/*background-color: red;
+*/}
+div.display-photo-copyright {
+	font-size:100%;
+	float: left;
+	color: #777;
+	padding: 5px;
+	margin:5px;
+/*	background-color: #ccc;*/
+	/*background-color: blue;
+*/}
+/* Structure ---------------------------------------------------------*/
+	
+	body > header,
+	body > nav,
+	body > section,
+	body > footer {
+		width: 100%;
+		margin: 0 auto;
+/*		font-family: 'Roboto';*/
+	}
+
+
+/* Font ---------------------------------------------------------*/
+
+   
+	strong {
+		font-weight: 700;
+	}
+
+/* Links ---------------------------------------------------------*/
+
+	a {
+		color: #666666;
+		text-decoration: underline;
+	}
+	a:hover,
+	a:focus {
+		color: #333;
+	}
+	
+	h1 a,
+	h2 a {
+		text-decoration: none;
+	}
+	
+	h3 a,
+	h4 a {
+		text-decoration: underline;
+		}
+h1.homepage, div.home-boxes div h2.homepage, div h3.homepage, div h4.homepage {
+/*	color: #cc0f09;
+*/
+color: #000
+/*	padding: 0.75em;*/
+	
+	
+}
+div h4.homepage {
+	font-size: 1.1em;
+	padding: 0.5em;
+	
+}
+
+/* Headings ---------------------------------------------------------*/
+	
+	/*h1,
+	h2,
+	h3 {
+		font-family: "Open Sans";
+		font-weight:800;
+	/*	text-transform: uppercase;*!/
+		font-style: italic;
+	}*/
+	
+	h1.story-title {
+		font-family: "Open Sans";
+		font-weight:800;
+		color: #333;
+		font-size: 2em;
+		line-height: 120%;	
+	}
+	h4.home-date {
+font-family: "Open Sans";
+font-weight:800;
+color: #333;
+font-size: 1.5em;
+line-height: 120%;	
+/*line-height: 2.1em;*/
+		
+	}
+	
+	h4 {
+		font-family: "Open Sans";
+		font-weight:500;
+		color: #333;
+		font-size: 0.9em;
+		line-height: 120%;
+		padding-top: 0.3em;
+		
+	}
+	
+/*	h4 {
+			font-family: "Abril Fatface";
+			font-size: 2em;
+			font-style: italic;
+			font-variant: normal;
+			font-weight: bold;
+			line-height: 2.1em;
+			
+	}*/
+	h1 {
+		color: #333;
+		font-size: 2.0em;
+		line-height: 120%;
+		font-weight:800;
+		padding-bottom: 0.5em;
+	}
+	
+	/*h1 span {
+		color: #CCC;
+	}
+	*/
+	h2 {
+		font-size: 1.1em;
+		margin: 0;
+	/*	padding: 0.5em;
+	*//*	line-height: 120%;
+	*/	font-weight: 700;
+	}
+	
+	h3 {
+		font-size: 1.1em;
+		line-height: 120%;
+		font-weight: 500;
+	}
+
+	h1 a,
+	h2 a,
+	h3 a {
+	/*	color: #1ecc08;
+	*/	margin: 0;
+		padding: 0;
+		/*color: #cc0f09;
+		*/
+		color: #000;
+	/*	text-decoration: none;*/
+	}
+	h2.homepage {
+		padding: 0.7em;
+			color: black;
+		justify-content: center; /* center items vertically, in this case */
+		    align-items: center;     /* center items horizontally, in this case */
+		   
+	}
+	
+
+
+/* Header ---------------------------------------------------------*/
+
+	body > header {
+		background: #cc0f09 url(../images/header.png) 0 0 repeat-x;
+		margin-bottom: 5px;
+	}
+	
+	/* Logo ---------------------------------------------------------*/
+	
+header div.logo {
+	float: left;
+	margin: 20px;
+	width: 208px;
+	height: 50px;
+	background-image: url(../images/sprite.png);
+	background-repeat: no-repeat;
+}
+
+div#honda-ad {
+	/*float: left;*/
+	margin:10px auto;
+	/*margin: 20px;*/
+	width: 120px;
+	height: 60px;
+	background-image: url(../images/9881-honda-online-banner-black-120x60.jpg);
+	background-repeat: no-repeat;
+}
+div#honda-ad a {
+	display: block;
+	height: 60px;
+}
+div#honda-ad span {
+	display: none;
+}
+
+div#general-ad {
+	margin:10px auto;
+}
+
+div#carrera-ad {
+	/*float: left;*/
+	margin:10px auto;
+	/*margin: 20px;*/
+	width: 728px;
+	height: 90px;
+	padding-bottom:10px;
+	background-image: url(../images/carrera-ad2.jpg);
+	background-repeat: no-repeat;
+}
+div#carrera-ad a {
+	display: block;
+	height: 60px;
+}
+div#carrera-ad span {
+	display: none;
+}
+
+div#huski-ad {
+	/*float: left;*/
+	margin:10px auto;
+	/*margin: 20px;*/
+	width: 728px;
+	height: 90px;
+	padding-bottom:10px;
+	background-image: url(../images/huski-ad4.jpg);
+	background-repeat: no-repeat;
+}
+div#huski-ad a {
+	display: block;
+	height: 60px;
+}
+div#huski-ad span {
+	display: none;
+}
+
+div#estrellagalicia-ad {
+	/*float: left;*/
+	margin:10px auto;
+	/*margin: 20px;*/
+	width: 728px;
+	height: 90px;
+	padding-bottom:10px;
+	background-image: url(../images/blank-ad.jpg);
+	background-repeat: no-repeat;
+}
+div#estrellagalicia-ad a {
+	display: block;
+	height: 60px;
+}
+div#estrellagalicia-ad span {
+	display: none;
+}
+
+
+@media screen and (min-width: 320px) {
+	div#honda-ad {
+		width: 320px;
+		height: 50px;
+		background-image: url(../images/9881-honda-online-banner-black-320x50.jpg);
+	}
+	div#honda-ad a {
+		display: block;
+		height: 50px;
+	}
+}
+@media screen and (min-width: 728px) {
+	div#honda-ad {
+		width: 728px;
+		height: 90px;
+		background-image: url(../images/9881-honda-online-banner-black-728x90.jpg);
+	}
+	div#honda-ad a {
+		display: block;
+		height: 90px;
+	}
+}
+/*@media screen and (min-width: 970px) {
+	div#honda-ad {
+		width: 970px;
+		height: 250px;
+		background-image: url(../images/9881-honda-online-banner-black-970x250.jpg);
+	}
+	div#honda-ad a {
+		display: block;
+		height: 250px;
+	}
+}*/
+
+		header div.brought {
+			/* display or not */
+			display: none;
+			float: right;
+			margin: 9px;
+			width: 287px;
+			height: 71px;
+			background-image: url(../images/honda-online-banner.png);
+			background-repeat: no-repeat;
+		}
+
+		header div.logo a {
+			display: block;
+			height: 50px;
+		}
+		header div.brought a {
+			display: block;
+			height: 71px;
+		}
+	
+		header div.logo span {
+			display: none;
+		}
+		header div.brought span {
+			display: none;
+		}
+		
+	
+	
+/* Navigation ---------------------------------------------------------*/
+
+	body > nav {
+		text-transform: uppercase;
+		font-family: Futura;
+		font-size: 1em;
+		font-weight:500;
+/*		font-style: bold;*/
+		color: #999;
+		margin-bottom: 10px;
+		display: grid;
+		grid-template-columns: repeat (9, 1fr);
+		grid-gap: 3px;
+
+	}
+
+	body > nav li {
+/*		flex: auto;*/
+	}
+
+/*#menu-home {
+  display: flex;
+  grid-column: 1;
+}
+#menu-news {
+  display: flex;
+  grid-column: 2;
+}
+#menu-races {
+  display: flex;
+  grid-column: 3;
+}
+#menu-standings {
+  grid-column: 4;
+}
+#menu-drivers {
+  grid-column: 5;
+}
+#menu-gallery {
+  grid-column: 6;
+}
+#menu-encyclopedia {
+  grid-column: 7;
+}
+#menu-store {
+  grid-column: 8;
+}*/
+	body > nav ul {
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0;
+		padding: 10px 0 10px 0;
+	}
+
+	body > nav ul li {
+		list-style: none;
+		display: inline-block;
+		margin: 0 .1em;
+		font-size: 0.9em;
+	}
+	
+	body > nav ul li a {
+		display: block;
+	text-decoration: none;
+	}
+	
+	body > nav ul li.selected a {
+		color: #333;
+		text-decoration: underline;
+		
+	}
+
+
+	
+/* Footer ---------------------------------------------------------*/
+
+	body > footer {
+		position: relative;
+		font-family: 'Roboto';
+		font-weight:400;
+	}
+
+	body > footer section {
+		text-align: center;
+		padding: 2px 0;
+		margin: 3px 0 0 0;
+		border-top: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+	}
+
+	body > footer ul {
+		overflow: hidden;
+		margin: 0;
+		padding-top: 20px;
+	}
+
+	body > footer ul li {
+		float: left;
+		list-style: none;
+		margin-left: 20px;
+	}
+	
+	body > footer ul li:first-child {
+		margin: 0;
+	}
+	
+	/* Logo ---------------------------------------------------------*/
+	
+		footer div.logo {
+			position: absolute;
+			bottom: -15px;
+			right: 0;
+			margin: 15px 0;
+			width: 105px;
+			height: 24px;
+			background-image: url(../images/sprite.png);
+			background-repeat: no-repeat;
+			background-position: 0 -51px;
+		}
+	
+		footer div.logo span {
+			display: none;
+		}
+		
+		
+		
+		
+		
+/* fonts */
+
+h1 {
+/*	font-family: "Open Sans";*/
+/*	font-size: 54px;*/
+/*	font-style: normal;
+	font-variant: normal;
+	font-weight: 800;
+	line-height: 26px;*/
+}
+h3 {
+/*	font-family: "Open Sans";*/
+/*	font-size: 14px;*/
+/*	font-style: normal;
+	font-variant: normal;*/
+/*	font-weight: 800;
+	text-transform: uppercase;*/
+/*	line-height: 15px;*/
+}
+p {
+/*	font-family: "Roboto";
+
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;*/
+	line-height: 1.2em;
+	margin-bottom: 10px;
+}
+p.date {
+/*	font-family: "Roboto";
+	font-weight: 500;
+	margin-bottom: 0;*/
+	
+}
+blockquote {
+/*	font-family: "Open Sans";
+/*	font-size: 21px;*!/
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;*/
+}
+pre {
+/*	font-family: "Open Sans";
+/*	font-size: 13px;*!/
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+/*	line-height: 18px;*!/
+text-align: justify;*/
+}
+div.index-block {
+	margin-bottom: 10px;
+}
+
+span.gmm {
+	color: silver;
+}
+
+
+/* media queries */
+
+
+
+@media screen and (max-width: 320px) {
+	body > nav {
+		display:none;
+	}
+	
+	li.home-boxes {
+		background-color: #cce0f7;
+		margin: 0;
+	}
+	
+}
+
+@media screen and (max-width: 500px) {
+	footer div.logo {
+		display: none;
+	}
+body > nav {
+	font-size: 0.5em;
+}
+/*li.home-boxes {
+	width: 100%;;
+}	*/
+.ad300x250 {
+	display:none;
+}
+.ad728x90 {
+	display: block;
+}
+
+}
+@media screen and (max-width: 800px) {
+	footer div.logo {
+		display: none;
+	}
+	.ad300x250 {
+		display:none;
+	}
+	.ad728x90 {
+		display: block;
+	}
+	
+}
+
+
+
+
+/* mobile or under */
+@media screen and (max-width: 835px) {
+	article#nextRace { display:none; }
+	header div.logo {
+		width: 104px;
+		height: 25px;
+		background-image: url(../images/sprite-small.png);
+		}
+	header div.brought {
+		width: 132px;
+		height: 30px;
+		background-image: url(../images/honda-online-banner-small.png);
+		}
+header div.brought a {
+	display: block;
+	height: 30px;
+}
+		header div.logo {
+			margin: 5px;
+			}
+		header div.brought {
+			margin: 5px;
+		}
+	body > nav {
+		font-size: 0.75em;
+	}
+	.ad300x250 {
+		display:none;
+	}
+	.ad728x90 {
+		display: block;
+	}
+	#wsw-f12007racestable .f1-race {
+		display:none;
+	}
+	
+ }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+#columnfour {
+	display: block;
+	/*background-color: green;*/
+}
+	body > nav {
+		font-size: 0.8em;
+	}
+	.ad300x250 {
+		display:none;
+	}
+	.ad728x90 {
+		display: block;
+	}
+	
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) { 
+/*	article#nextRace { display:none;}
+*/	
+#columnfour {
+	display: block;
+	/*background-color: green;*/
+}
+
+	body > nav {
+		font-size: 1em;
+	
+	 }
+	 .ad300x250 {
+	 	display:none;
+	 }
+	 .ad728x90 {
+	 	display: block;
+	 }
+	 
+}
+
+@media screen and (min-width: 990px) { 
+	body > nav {
+		font-size: 1.5em;
+	}
+	p {
+		font-size: 0.9em;
+		line-height: 1.0em;
+		margin-bottom: 15px;
+	}
+	h1 {
+		font-size: 2.0em;
+		line-height: 150%;
+	}	
+	h3 {
+		font-size: 1.1em;
+		line-height: 130%;
+		font-weight: 800;
+	}
+	li.home-boxes {
+/*		width: 33.333%;
+		background-color: #258fbf;*/
+	}	
+	.ad300x250 {
+		display:none;
+	}
+	.ad728x90 {
+		display: block;
+	}
+	
+ }
+@media screen and (min-width: 1300px) { 
+#columnfour {
+	display: block;
+	/*background-color: green;*/
+}
+	body > nav {
+		font-size: 2em;
+	}
+	p {
+		font-size: 130%;
+		line-height: 1.5em;
+		margin-bottom: 20px;
+	}
+	h1 {
+		font-size: 2.0em;
+		line-height: 160%;
+	}
+	h3 {
+		font-size: 2.0em;
+		line-height: 160%;
+		font-weight: 800;
+	}
+	.ad300x250 {
+		display:none;
+	}
+	.ad728x90 {
+		display: block;
+	}
+	
+ }
+
+
+
+
+
+
+
+#wsw-f12007racestable {
+	border-collapse: collapse;
+	width: 99%;
+	padding: 0;
+	margin: 0;
+	background: #eee;
+	border: 1px solid #444;	
+}
+#wsw-f12007racestable td {
+	padding: 2px;
+}
+#wsw-f12007racestable .f1-title {
+	text-align: center;
+	background: url("http://photos.grandprix.com/jpeg/menubutton-grey.jpg") left top;
+	color: #fff;
+	padding: 3px;
+}
+#wsw-f12007racestable .f1-header {
+	background: #ccc;
+	color: #000;
+}
+#wsw-f12007racestable .f1-round, #wsw-f12007racestable .f1-event, #wsw-f12007racestable .f1-driver, #wsw-f12007racestable .f1-total, #wsw-f12007racestable .f1-date, #wsw-f12007racestable .f1-circuit, #wsw-f12007racestable .f1-length, #wsw-f12007racestable .f1-race, #wsw-f12007racestable .f1-laps, #wsw-f12007racestable .f1-distance, #wsw-f12007racestable .f1-winner, #wsw-f12007racestable .f1-report {
+	font-size: 80%;
+}
+#wsw-f12007racestable .f1-round {
+	background: #ccc;
+	color: #000;
+	text-align: right;
+	width: 15px;
+}
+#wsw-f12007racestable .f1-event {
+	background: #191970;
+	color: #fff;
+	font-size: 100%;
+	font-weight: bold;
+	padding-left: 5px;
+}
+#wsw-f12007racestable .f1-driver {
+	background: #191970;
+	color: #fff;
+	font-size: 70%;
+	font-weight: bold;
+	padding-left: 5px;
+}
+#wsw-f12007racestable .f1-race {
+	font-size: 40%;
+	text-align: center;
+	width:8px;
+}
+#wsw-f12007racestable .f1-total {
+	background: #191970;
+	color: #fff;
+	font-size: 50%;
+	font-weight: bold;
+	text-align: right;	
+}
+div table#wsw-f12007racestable .f1-event a {
+	color: #ddd;
+}
+#wsw-f12007racestable .f1-date {
+	padding-left: 5px;
+}
+#wsw-f12007racestable .f1-laps {
+	text-align: center;
+}
+#wsw-f12007racestable .f1header-header .wsw-date {
+	padding-left: 5px;
+}
+
+
+/*Highlight the current race */
+
+#wsw-f12007racestable tr.f1-currentracerow .f1-round {
+	background-color: #bfbfbf;
+}
+#wsw-f12007racestable tr.f1-currentracerow .f1-event {
+	background-color: #78789a;
+}
+#wsw-f12007racestable tr.f1-currentracerow td {
+	background-color: #cdcdcd;
+}
+#wsw-f12007racestable tr.f1-currentracerow {
+	border: 1px solid #666;
+}
+
+
+.ad {
+	padding-bottom: 10px;
+}
+
+.ad728x90 {
+	padding-bottom: 10px;
+}
+
+.ad300x250 {
+	padding-bottom: 10px;	
+}
+
+#wsw-todaysstories { 
+	width: 400px;
+/*	margin-left: 50px; */
+	margin-top: 20px;
+	margin-bottom: 15px;
+	padding: 5px; 
+	border: 1px solid #777;
+	border-radius: 16px;
+	font-size: 90%;
+	}
+
+#wsw-todaysstoriestitle { 
+	color: white;
+	background-color: #777;
+	text-transform: uppercase;
+	border-radius: 16px;
+	padding: 2px; 
+	padding-left: 4px;
+	margin-bottom: 4px;
+	}
+
+#wsw-todaysstoriestitle-race { 
+	color: white;
+	background-color: #777;
+	text-transform: uppercase;
+	padding: 2px; 
+	padding-left: 4px;
+	margin-bottom: 4px;
+	}
+	
+	
+	.button {
+	    background-color: #4CAF50; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 5px 12px;
+		margin-bottom: 2px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	/*    font-size: 16px;
+	*/}
+	
+	
+	.button-green {background-color: #4CAF50;} /* Green */
+	.button-blue {background-color: #008CBA;} /* Blue */
+	.button-red {background-color: #f44336;} /* Red */ 
+	.button-gray {background-color: #e7e7e7; color: black;} /* Gray */ 
+	.button-black {background-color: #555555;} /* Black */
+	
+	
+	

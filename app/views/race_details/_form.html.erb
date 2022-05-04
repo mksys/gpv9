@@ -1,0 +1,62 @@
+<%= form_with(model: race_detail, local: true) do |form| %>
+  <% if race_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(race_detail.errors.count, "error") %> prohibited this race_detail from being saved:</h2>
+
+      <ul>
+      <% race_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.number_field :number, id: :race_detail_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :round %>
+    <%= form.number_field :round, id: :race_detail_round %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_laps %>
+    <%= form.number_field :total_laps, id: :race_detail_total_laps %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.number_field :year, id: :race_detail_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :race_name %>
+    <%= form.text_field :race_name, id: :race_detail_race_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :race_name_gp %>
+    <%= form.text_field :race_name_gp, id: :race_detail_race_name_gp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :circuit %>
+    <%= form.text_field :circuit, id: :race_detail_circuit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :circuit_length %>
+    <%= form.text_field :circuit_length, id: :race_detail_circuit_length %>
+  </div>
+
+  <div class="field">
+    <%= form.label :race_date_on %>
+    <%= form.date_select :race_date_on, id: :race_detail_race_date_on %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

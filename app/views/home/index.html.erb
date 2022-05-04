@@ -1,0 +1,68 @@
+<% @current_news_story = 0  %>
+
+
+	
+	
+<div class="homepage-grid">
+	
+
+
+
+	
+	
+	
+<% @stories.each do |story| %>
+	<% @current_news_story = @current_news_story + 1 %>
+	<% if @current_news_story < 25 %>
+	<div class="home-boxes<% unless story.legacy_photo.nil? %> withthumbnail"><% else %>"><% end %>
+		<% unless story.legacy_photo.nil? %>
+			<a href="<%= story.filename %>"><img src="<%= story.legacy_photo.thumbnail_photo %>" width="300" height="200" /></a>
+			<span class="homepage-overlay"><h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2></span>
+			<% else %>
+			<h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2>
+			<% end %>
+		</div>
+	<% end %>
+<% end %>
+
+
+
+</div>
+<br />
+
+<div id="general-ad" class="clear">
+	<script type="text/javascript"><!--
+		e9 = new Object();
+	    e9.size = "728x90";
+	//--></script>
+	<script type="text/javascript" src="//tags.expo9.exponential.com/tags/GrandPrixcom/ROS/tags.js"></script>
+</div>
+
+
+<div class="homepage-grid">
+<% @current_news_story = 0  %>
+<div class="home-boxes">
+	<h4 class="homepage">RECENT NEWS</h4>
+<% @stories.each do |story| %>
+	<% @current_news_story = @current_news_story + 1 %>
+	<% if @current_news_story > 15 %>
+		<h4 class="homepage">• <a href="<%= story.filename %>"><%= story.headline %></a></h4>
+	<% end %>
+<% end %>
+
+<a href="/">More news</a>
+
+</div>
+
+<div class="home-boxes">
+<h4 class="homepage">FEATURES</h4>
+	<% @features.each do |feature| %>
+		<h4 class="homepage">• <a href="<%= feature.filename %>"><% if feature.category_id == 2 && feature.feature_type %><%= feature.feature_type + " - "%><% end %>
+		<%= feature.headline %></a></h4>		
+	<% end %>
+
+	</div>
+	
+
+	
+</div>

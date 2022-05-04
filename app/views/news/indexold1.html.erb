@@ -1,0 +1,19 @@
+<p><%= paginate @stories %>
+<%= page_entries_info @stories %>
+</p>
+
+<div class="homepage-grid">
+
+<% @stories.each do |story| %>
+	<div class="home-boxes">
+		<% unless story.legacy_photo.nil? %>
+			<a href="<%= story.filename %>"><img src="<%= story.legacy_photo.display_photo %>" width="300" height="200" /></a>
+			<% end %>
+
+			<h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2>
+		
+		</div>
+
+<% end %>
+</div>
+

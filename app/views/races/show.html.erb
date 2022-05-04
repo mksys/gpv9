@@ -1,0 +1,33 @@
+<p><%= @story.race_detail.race_name_gp %> GP <%= @story.race_detail.year %><p>
+<p class="date"><%= @story.date_live_at.to_s(:gp_article).upcase %></p>
+
+
+<h1><%= @story.headline %></h1>
+			<% unless @story.legacy_photo.nil? %>
+					<div class="story-photo">
+					<%= link_to image_tag(@story.legacy_photo.thumbnail_photo), display_photo_url(photo_url: @story.legacy_photo.display_photo, photo_caption: @story.legacy_photo.caption.html_safe, photo_copyright: @story.legacy_photo.copyright.html_safe) %>
+	
+<div class="story-photo-credits">				
+<div class="story-photo-caption"><%= @story.legacy_photo.caption.html_safe %><br /><%= @story.legacy_photo.copyright.html_safe %></div>
+	</div>	
+				</div>
+			
+				<% end %>
+				
+				<div class="clear"></div>
+				
+<div class="multicolumn">
+	<%= raw @story.body %>
+</div>
+
+<p><%= raw @story.body_html %></p>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox"></div>
+
+<div data-turbolinks="false" 
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>

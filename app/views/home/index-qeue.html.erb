@@ -1,0 +1,95 @@
+<% @current_news_story = 0  %>
+
+<div class="homepage-grid2">
+	<div class="home-boxes2 withthumbnail">
+		<a href="/races/chinese-gp-2018-race-analysis.html"><img style="width: 100%;" src="http://photos.grandprix.com/jpeg/rubio/pchn18/sun/ricciardo4-rg.jpg" /></a>
+
+		<span class="homepage-overlay"><h2 class="homepage"><a href="/races/chinese-gp-2018-race-analysis.html">Race Analysis</a> <cite>Dan Knutson</cite><br /><a href="/races/chinese-gp-2018-race-analysis.html">Sister act</a></h2></span>
+	</div>
+
+
+	<div class="home-boxes2">
+		<a href="/races/overview"><img style="width: 100%;" src="http://photos.grandprix.com/jpeg/homepage/chinesegp18preview.jpg" /></a>
+	</div>
+
+
+
+
+	<div style="padding-right: 0.5em; text-align:right;" class="home-boxes2">
+		<img src="images/vasconcelos2.png" />
+		<h2><a href="/features/straight-talk/of-schadenfreude-and-commiseration.html">Straight Talk</a> <cite>Luis Vasconcelos</cite><br /><a href="/features/straight-talk/of-schadenfreude-and-commiseration.html">Of Schadenfreude and Commiseration</a></h2>
+		<h4>While everybody working for the ten Formula One teams is really busy during Grand Prix weekends, there's always a bit of time, at the end of an exhausting working day, to look around, see what certain teams have done and, between friends, to express your feelings.</h4>
+		
+		<a href="/features/straight-talk/of-schadenfreude-and-commiseration.html">Full Story</a>.</h4>
+	</div>
+
+	<div style="padding-right: 0.5em; text-align:right;" class="home-boxes2">
+		<div id="columnfour">
+			<a href="http://store.grandprix.com/2017/11/01/how-to-build-a-car-the-autobiography-of-the-worlds-greatest-formula-1-designer/"><img height="166" width="130" src="http://photos.grandprix.com/jpeg/books/howtobuild.jpg" alt="How to Build a Car: The Autobiography of the World's Greatest Formula 1 Designer" /></a><h2><a href="http://store.grandprix.com/2017/11/01/how-to-build-a-car-the-autobiography-of-the-worlds-greatest-formula-1-designer/">How to Build a Car: The Autobiography of the World's Greatest Formula 1 Designer</a></h2>
+			<h4>by Adrian Newey (Author) - The world's foremost designer in Formula One, Adrian Newey is arguably one of Britain's greatest engineers and this is his fascinating, powerful memoir. How to Build a Car explores the story of Adrian's unrivalled 35-year career in Formula One through the prism of the cars he has designed.</h4>
+			<h4><a href="http://store.grandprix.com/2017/11/01/how-to-build-a-car-the-autobiography-of-the-worlds-greatest-formula-1-designer/"><strong>Shop for it now!</strong></a></h4>
+		</div>
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+		
+	</div>
+	
+	
+<div class="homepage-grid">
+	
+	
+<% @stories.each do |story| %>
+	<% @current_news_story = @current_news_story + 1 %>
+	<% if @current_news_story < 16 %>
+	<div class="home-boxes<% unless story.legacy_photo.nil? %> withthumbnail"><% else %>"><% end %>
+		<% unless story.legacy_photo.nil? %>
+			<a href="<%= story.filename %>"><img src="<%= story.legacy_photo.display_photo %>" width="300" height="200" /></a>
+			<span class="homepage-overlay"><h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2></span>
+			<% else %>
+			<h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2>
+			<% end %>
+		</div>
+	<% end %>
+<% end %>
+</div>
+<br />
+<div class="homepage-grid">
+<% @current_news_story = 0  %>
+<div class="home-boxes">
+	<h4 class="homepage">RECENT NEWS</h4>
+<% @stories.each do |story| %>
+	<% @current_news_story = @current_news_story + 1 %>
+	<% if @current_news_story > 15 %>
+		<h4 class="homepage">• <a href="<%= story.filename %>"><%= story.headline %></a></h4>
+	<% end %>
+<% end %>
+
+<a href="/">More news</a>
+
+</div>
+
+<div class="home-boxes">
+<h4 class="homepage">FEATURES</h4>
+	<% @features.each do |feature| %>
+		<h4 class="homepage">• <a href="<%= feature.filename %>"><% if feature.category_id == 2 && feature.feature_type %><%= feature.feature_type + " - "%><% end %>
+		<%= feature.headline %></a></h4>		
+	<% end %>
+
+	</div>
+	
+
+	
+</div>

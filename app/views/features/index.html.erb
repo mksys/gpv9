@@ -1,0 +1,31 @@
+<% @current_date_live_on = ""  %>
+<h1>Features</h1>
+
+<p><%= paginate @stories %>
+<%= page_entries_info @stories %>
+</p>
+
+<% @stories.each do |story| %>
+
+	<% if story.date_live_on != @current_date_live_on %>
+		<% if @current_date_live_on != "" %>
+			</ul>	
+		<% end %>
+		<ul>	
+	<% end %>
+	
+	<li class="clear" style="margin-bottom:20px;">
+<a style="float: left; margin-right:10px;margin-bottom:10px;"href="<%= story.filename %>"><img src="<% if !story.legacy_photo.nil? %><%= story.legacy_photo.display_photo %><% else %>http://placehold.it/100x67/CCC/CCC<% end %>" width="300" height="200" /></a>		<h3><a href="<%= story.filename %>"><% if story.category_id == 2 && story.feature_type %><%= story.feature_type + " - "%><% end %>
+		<%= story.headline %></a></h3>
+		<p><%= story.abstract %><a href="<%= story.filename %>">Full Story</a></p>
+		
+
+
+	</li>
+	
+	
+	<% @current_date_live_on = story.date_live_on %>
+<% end %>
+<p><%= paginate @stories %>
+<%= page_entries_info @stories %>
+</p>

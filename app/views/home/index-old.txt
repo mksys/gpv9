@@ -1,0 +1,126 @@
+	<div class="home-boxes withthumbnail">
+	<a href="https://www.grandprix.com/features/straight-talk/f1-waves-the-white-flag-of-surrender.html"><img src="https://photos.grandprix.com/jpeg/races/pbah21/sun/alp/alonso9-rd.jpg" width="300" height="200" /></a>
+<span class="homepage-overlay"><h2 class="homepage"><a href="https://www.grandprix.com/features/straight-talk/f1-waves-the-white-flag-of-surrender.html">STRAIGHT TALK - F1 WAVES THE WHITE FLAG OF SURRENDER <cite>BY LUIS VASCONCELOS</cite></a></h2></span>
+	</div>
+
+
+
+
+
+
+
+
+<div class="home-boxes withthumbnail">
+<a href="/races/spanish-gp-2020-race-analysis.html"><img src="https://photos.grandprix.com/jpeg/races/pspa20/sun/mer/start3-rd.jpg" width="300" height="200" /></a>
+<span class="homepage-overlay"><h2 class="homepage"><a href="/races/spanish-gp-2020-race-analysis.html">SPANISH GP RACE ANALYSIS - ROUTE 66</a></h2></span>
+</div>
+
+
+
+
+
+<div style="padding-right: 0.5em; text-align:right;" class="home-boxes2">
+	<a href="/features/straight-talk/a-great-new-crop.html"><img src="images/vasconcelos2.png" /></a>
+	<h2><a href="/features/straight-talk/a-great-new-crop.html">Straight Talk</a> <cite>Luis Vasconcelos</cite><br /><a href="/features/straight-talk/a-great-new-crop.html">A great new crop</a></h2>
+	<h4>One of the highlights of the season is the quality of the three rookies that have joined the field this year. The top three finishers of the previous year's Formula 2 Championship managed to move straight into Grand Prix racing, so we have George Russell, Alex Albon and Lando Norris in Formula One this year and all three of them have already shown they belong here - and may be on their way to future stardom.</h4>
+	<a href="/features/straight-talk/a-great-new-crop.html">Full Story</a>.</h4>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="homepage-grid2">
+
+
+
+	<div class="home-boxes2 withthumbnail">
+		<a href="/races/abu-dhabi-gp-2019-race-analysis.html"><img style="width: 100%;" src="https://photos.grandprix.com/jpeg/rubio/pabu19/sun/hamilton4-rd.jpg" /></a>
+
+		<span class="homepage-overlay"><h2 class="homepage"><a href="/races/abu-dhabi-gp-2019-race-analysis.html">Abu Dhabi GP Race Analysis</a><br /><cite>Dan Knutson</cite><br /><a href="/races/abu-dhabi-gp-2019-race-analysis.html">Grand Slam</a></h2></span>
+	</div>
+
+
+
+
+	
+	<div class="home-boxes2">
+		<a href="https://store.grandprix.com/apps/todays-deals"><img style="width: 100%;" src="https://photos.grandprix.com/jpeg/jap19ad/phcad-<%= @dayofmonth %>.jpg" /></a>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="home-boxes withthumbnail">
+				<a href="/news/sir-stirling-moss-best-photos-from-the-cahier-archive.html"><img src="https://photos.grandprix.com/jpeg/phc/Moss_1959_Monaco_01_BC-rd.jpg" width="300" height="200" /></a>
+				<span class="homepage-overlay"><h2 class="homepage"><a href="/news/sir-stirling-moss-best-photos-from-the-cahier-archive.html">SIR STIRLING MOSS - BEST PHOTOS FROM THE CAHIER ARCHIVE</a></h2></span>
+			</div>	
+
+
+
+
+
+
+
+
+
+
+	<div style="padding-right: 0.5em; text-align:right;" class="home-boxes2">
+		<a href="/features/straight-talk/a-great-new-crop.html"><img src="images/vasconcelos2.png" /></a>
+		<h2><a href="/features/straight-talk/a-great-new-crop.html">Straight Talk</a> <cite>Luis Vasconcelos</cite><br /><a href="/features/straight-talk/a-great-new-crop.html">A great new crop</a></h2>
+		<h4>One of the highlights of the season is the quality of the three rookies that have joined the field this year. The top three finishers of the previous year's Formula 2 Championship managed to move straight into Grand Prix racing, so we have George Russell, Alex Albon and Lando Norris in Formula One this year and all three of them have already shown they belong here - and may be on their way to future stardom.</h4>
+		<a href="/features/straight-talk/a-great-new-crop.html">Full Story</a>.</h4>
+	</div>
+
+
+
+
+
+	
+	
+	
+	
+
+
+
+
+		
+	</div>

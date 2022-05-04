@@ -1,0 +1,10 @@
+<h1>Import#convert</h1>
+<p>Find me in app/views/import/convert.html.erb</p>
+
+<p>@number_of_stories in <%= @category %> = <%= @number_of_stories %></p>
+<p>total_stories = <%= @total_stories %></p>
+
+
+<% @stories.each do |stories| %>
+  <%= stories.id %>-<%= stories.Headline %><br />
+<%end %>

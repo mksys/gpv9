@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stories</h1>
+ 
+<h2><%= link_to 'New Story', new_story_path %> | <%= link_to 'New GMM Story', new_story_path(:typeofstory => "GMM") %> | <%= link_to 'New Straight Talk', new_story_path(:typeofstory => "Straight Talk") %></h2>
+
+<h2><%= link_to 'New Legacy Photo', new_legacy_photo_path %></h2>
+
+
+ <p><%= paginate @stories %>
+<%= page_entries_info @stories %>
+</p>
+<p id="notice"><%= notice %></p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Publish</th>
+      <th>Date live on</th>
+      <th>Headline</th>
+      <th>Cat</th>
+      <th>Temp</th>
+      <th>Race</th>
+      <th>Leg photo</th>
+      <th>Storyid</th>
+      <th>Filename</th>
+      <th>Name slug</th>
+      <th>Legacy filename</th>
+      <th>Author</th>
+      <th>Feature type</th>
+      <th>Priority</th>
+      <th>Analysis</th>
+      <th>Date live at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stories.each do |story| %>
+      <tr>
+        <td><% if story.publish %>•<% else %> <% end %></td>
+        <td><%= story.date_live_on %></td>
+        <td nowrap><%= link_to story.headline, edit_story_path(story) %></td>
+        <td><%= story.category_id %></td>
+        <td><%= story.ornament_id %></td>
+        <td><%= story.race_detail_id %></td>
+        <td><% unless story.legacy_photo.nil? %>•<% else %> <% end %>
+        <td><%= story.storyid %></td>
+        <td><%= story.filename %></td>
+        <td><%= story.name_slug %></td>
+        <td><%= story.legacy_filename %></td>
+        <td><%= story.author %></td>
+        <td><%= story.feature_type %></td>
+        <td><%= story.priority %></td>
+        <td><%= story.analysis %></td>
+         <td><%= story.date_live_at %></td>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h2><%= link_to 'New Story', new_story_path %> | <%= link_to 'New GMM Story', new_story_path(:typeofstory => "GMM") %> | <%= link_to 'New Straight Talk', new_story_path(:typeofstory => "Straight Talk") %></h2>
+
+ <p><%= paginate @stories %>
+<%= page_entries_info @stories %>
+</p>
+

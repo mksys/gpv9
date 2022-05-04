@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-GB">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176118-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-176118-1');
+	</script>
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+	
+	<!-- Facebook Pixel Code -->
+	<script>
+	  !function(f,b,e,v,n,t,s)
+	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	  n.queue=[];t=b.createElement(e);t.async=!0;
+	  t.src=v;s=b.getElementsByTagName(e)[0];
+	  s.parentNode.insertBefore(t,s)}(window, document,'script',
+	  'https://connect.facebook.net/en_US/fbevents.js');
+	  fbq('init', '815807641915373');
+	  fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	  src="https://www.facebook.com/tr?id=815807641915373&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title><%= @site_title %></title>
+	<meta name="author" content="Grandprix.com - First &amp; fastest: The original online F1 news service" />
+	<meta name="copyright" content="&copy; 1988-2018 Inside F1, Inc." />
+	<meta name="keywords" content="formula 1, F1, f1, formula1, inside f1, grandprix.com, insidef1.com, formula one, F1 racing, FIA, racingcars, racing, motorsport, autoracing, autos, grand prix, grandprix, cars, michael schumacher, fernando alonso, kimi raikkonen, schumacher, felipe massa, lewis hamilton, nico rosberg, jenson button, sebastian vettel, nico hulkenberg, vitaly petrov, kamui kobayashi, adrian sutil, vitantonio liuzzi, robert kubica, jaime alguesuari, mark webber, heikki kovalainen, jarno trulli, timo glock, lucas di grassi, bruno senna, sebastien buemi, karun chandhok, giancarlo fisichella, button, rubens barrichello, juan pablo montoya, nick heidfeld, pedro de la rosa, trulli, david coulthard, jaques villeneuve, gilles villeneuve, webber, kubica, rosberg, klien, liuzzi, scott speed, monteiro, albers, sato, ide, hamilton, paffett, kovalainen, zonta, piquet, badoer, rossiter, glock, vettel, montagny, doornbos, ammermuller, wurz, karthikeyan, nakajima, sutil, winkelhock, fauzy, valles, davidson, yamamoto, hakkinen, hill, mansell, alesi, verstappen, mclaren, williams, ferrari, honda, prost, renault, toyota, red bull, toro rosso, spyker, super aguri, benetton, minardi, sauber, senna, monte carlo, monaco, silverstone, spa, hockenheim, san marino, monza, magny cours, indianapolis, malaysia, bahrain, barcelona, montreal, hungary, turkey, japan, china, singapore, korea, bahrain, abu dhabi" />
+	<meta name="description" content="Get the latest Formula 1 news, features, photos, results, history on drivers and teams in our encyclopedia - all on Grandprix.com" />
+	
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="alternate" type="application/rss+xml" title="Grandprix.com Current News" href="http://www.grandprix.com/feed?format=rss">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans":400italic,600italic,800italic,400,600,800,300 />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Futura" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+	
+	<link rel="stylesheet" type="text/css" media="screen,projection" href="/css/stylesheet.css">
+	
+	
+</head> 
+<body>
+
+
+	<header class="clear">
+	  <div class="logo"><a href="http://www.grandprix.com"><span>Grandprix.com</span></a></div>
+	  <div class="brought"><a href="https://global.honda/"><span>Honda website</span></a></div>
+
+	    
+	</header>
+
+<%= render(partial: "/layouts/menu") %>
+
+	<%= render(partial: "/layouts/carrera") %>
+	
+	<section class="content">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+	<% if notice %>
+	  <p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+	  <p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+    <%= yield %>
+	
+	
+	</section>
+
+
+	<footer>
+	
+
+		<ul>
+			<li>&copy; <%= Time.current.year %> Inside F1 Inc</li>
+			<li><a href="/terms">Terms</a></li>
+			<li><a href="/copyright">Copyright</a></li>
+			<li><a href="/privacy">Privacy</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Advertise</a></li>
+		</ul>
+		
+		<div class="logo"><a href="http://www.grandprix.com"><span>Grandprix.com</span></a></div>
+
+	</footer>
+
+	<script type="text/javascript">
+	  var _sf_async_config = { uid: 2407, domain: 'grandprix.com', useCanonical: true };
+	  (function() {
+	    function loadChartbeat() {
+	      window._sf_endpt = (new Date()).getTime();
+	      var e = document.createElement('script');
+	      e.setAttribute('language', 'javascript');
+	      e.setAttribute('type', 'text/javascript');
+	      e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+	      document.body.appendChild(e);
+	    };
+	    var oldonload = window.onload;
+	    window.onload = (typeof window.onload != 'function') ?
+	      loadChartbeat : function() { oldonload(); loadChartbeat(); };
+	  })();
+	</script>
+	
+</body>
+</html>

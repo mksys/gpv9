@@ -1,0 +1,132 @@
+
+<%= form_with(model: story, local: true) do |form| %>
+  <% if story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+      <ul>
+      <% story.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= form.hidden_field :priority, value: params['priority'] %>
+
+  <div class="field">
+    <%= form.label :publish %>
+    <%= form.check_box :publish, value: params['publish'] %>
+  </div>
+
+	<div class="field">
+		<%= form.label :category_id %>
+		<%= form.collection_select :category_id, Category.order(:id), :id, :name,
+			include_blank: true %>
+	</div>
+
+	<div class="field">
+		<%= form.label :ornament_id %>
+		<%= form.collection_select :ornament_id, Ornament.order(:id), :id, :name,
+			include_blank: true %>
+	</div>
+
+	<div class="field">
+		<%= form.label :race_detail_id %>
+		<%= form.collection_select :race_detail_id, RaceDetail.order(number: :desc), :id, :number,
+			include_blank: true %>
+    <%= form.number_field :race_detail_id, id: :story_race_detail_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :headline %>
+    <%= form.text_field :headline, :size=>"80",id: :story_headline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abstract %>
+    <%= form.text_area :abstract, :size=>"80", id: :story_abstract %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, :size=>"80", id: :story_body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body_html %>
+    <%= form.text_area :body_html, :size=>"80", id: :story_body_html %>
+  </div>
+
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author, value: params['author'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :priority %>
+    <%= form.number_field :priority, value: params['priority']  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :filename %>
+    <%= form.text_field :filename, id: :story_filename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_slug %>
+    <%= form.text_field :name_slug, :size=>"80", id: :story_name_slug %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :show_author %>
+    <%= form.check_box :show_author, id: :story_show_author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :revision %>
+    <%= form.number_field :revision, id: :story_revision %>
+  </div>
+
+  <div class="field">
+    <%= form.label :analysis %>
+    <%= form.check_box :analysis, id: :story_analysis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_live_at %>
+    <%= form.datetime_select :date_live_at, id: :story_date_live_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_live_on %>
+    <%= form.date_select :date_live_on, id: :story_date_live_on %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sort_name %>
+    <%= form.text_field :sort_name, id: :story_sort_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :storyid %>
+    <%= form.number_field :storyid, id: :story_storyid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :legacy_filename %>
+    <%= form.text_field :legacy_filename, id: :story_legacy_filename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :feature_type %>
+    <%= form.text_field :feature_type, id: :story_feature_type %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

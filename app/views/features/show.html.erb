@@ -1,0 +1,32 @@
+
+
+<p>Features<% if @story.feature_type %> - <%= @story.feature_type %><% end %></p>
+
+<p class="date"><%= @story.date_live_at.to_s(:gp_article).upcase %></p>
+
+
+
+<h1><%= @story.headline %></h1>
+<% if @story.show_author %><h3>BY <%= @story.author.upcase %></h3><% end %>
+<% unless @story.legacy_photo.nil? %>
+<div class="story-photo"><img class="story" src="<%= @story.legacy_photo.display_photo %>" width="<%= @story.legacy_photo.display_photo_width %>" height="<%= @story.legacy_photo.display_photo_height %>" />
+<div class="story-photo-caption"><%= @story.legacy_photo.caption.html_safe %></div><div class="story-photo-copyright"><%= @story.legacy_photo.copyright.html_safe %></div>
+</div>
+<div class="clear"></div>
+<% end %>
+<div class="multicolumn">
+	<%= raw @story.body %>
+</div>
+<p><%= @story.body_html %></p>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox"></div>
+
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+

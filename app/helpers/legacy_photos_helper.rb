@@ -1,0 +1,2 @@
+module LegacyPhotosHelper
+end

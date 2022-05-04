@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @race_detail.number %>
+</p>
+
+<p>
+  <strong>Round:</strong>
+  <%= @race_detail.round %>
+</p>
+
+<p>
+  <strong>Total laps:</strong>
+  <%= @race_detail.total_laps %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @race_detail.year %>
+</p>
+
+<p>
+  <strong>Race name:</strong>
+  <%= @race_detail.race_name %>
+</p>
+
+<p>
+  <strong>Race name gp:</strong>
+  <%= @race_detail.race_name_gp %>
+</p>
+
+<p>
+  <strong>Circuit:</strong>
+  <%= @race_detail.circuit %>
+</p>
+
+<p>
+  <strong>Circuit length:</strong>
+  <%= @race_detail.circuit_length %>
+</p>
+
+<p>
+  <strong>Race date on:</strong>
+  <%= @race_detail.race_date_on %>
+</p>
+
+<%= link_to 'Edit', edit_race_detail_path(@race_detail) %> |
+<%= link_to 'Back', race_details_path %>

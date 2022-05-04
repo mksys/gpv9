@@ -1,0 +1,112 @@
+<%= form_with(model: story, local: true) do |form| %>
+  <% if story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+      <ul>
+      <% story.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table>
+	<tr>
+		<td><%= form.label :publish %></td>
+		<td><%= form.check_box :publish, id: :story_publish %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :category_id %></td>
+		<td><%= form.collection_select :category_id, Category.order(:id), :id, :name, include_blank: true %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :ornament_id %></td>
+		<td><%= form.collection_select :ornament_id, Ornament.order(:id), :id, :name,	include_blank: true %>
+		</td>
+	</tr>
+	<tr>
+		<td><%= form.label :headline %></td>
+		<td><%= form.text_field :headline, :size=>"80",id: :story_headline %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :abstract %></td>
+		<td><%= form.text_area :abstract, :size=>"80", id: :story_abstract %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :body %></td>
+		<td><%= form.text_area :body, cols: "80", rows: "10", id: :story_body %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :body_html %></td>
+		<td><%= form.text_area :body_html, cols: "80", rows: "3", id: :story_body_html %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :feature_type %></td>
+		<td><%= form.text_field :feature_type, id: :story_feature_type %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :date_live_at %></td>
+		<td><%= form.datetime_select :date_live_at, id: :story_date_live_at %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :date_live_on %></td>
+		<td><%= form.date_select :date_live_on, id: :story_date_live_on %></td>
+	</tr>
+	<tr>
+		<td colspan="2">__________________________________________________________________________________</td>
+	</tr>
+	<tr>
+		<td><%= form.label :author %></td>
+		<td><%= form.text_field :author, id: :story_author %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :sort_name %></td>
+		<td><%= form.text_field :sort_name, id: :story_sort_name %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :storyid %></td>
+		<td><%= form.number_field :storyid, id: :story_storyid %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :legacy_filename %></td>
+		<td><%= form.text_field :legacy_filename, id: :story_legacy_filename %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :race_detail_id %></td>
+		<td>
+			<%= form.collection_select :race_detail_id, RaceDetail.order(number: :desc), :id, :number, include_blank: true %>
+	  		<%= form.number_field :race_detail_id, id: :story_race_detail_id %>
+		</td>
+	</tr>
+	<tr>
+		<td><%= form.label :priority %></td>
+		<td><%= form.number_field :priority, id: :story_priority %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :show_author %></td>
+		<td><%= form.check_box :show_author, id: :story_show_author %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :revision %></td>
+		<td><%= form.number_field :revision, id: :story_revision %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :analysis %></td>
+		<td><%= form.check_box :analysis, id: :story_analysis %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :filename %></td>
+		<td><%= form.text_field :filename, id: :story_filename, :size=>"80" %></td>
+	</tr>
+	<tr>
+		<td><%= form.label :name_slug %></td>
+		<td><%= form.text_field :name_slug, :size=>"80", id: :story_name_slug %></td>
+	</tr>
+</table>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

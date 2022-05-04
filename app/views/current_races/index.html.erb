@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Current races</h1>
+
+<div id="current_races">
+  <% @current_races.each do |current_race| %>
+    <%= render current_race %>
+    <p>
+      <%= link_to "Show this current race", current_race %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New current race", new_current_race_path %>

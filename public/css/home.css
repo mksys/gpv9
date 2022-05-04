@@ -1,0 +1,11 @@
+body#home .featured,
+body#home .raceHub {
+	height: 400px;
+}
+	
+/* Social & Encyclopaedia ---------------------------------------------------------*/
+
+	body#home .social,
+	body#home .encyclopaedia {
+		height: 190px;
+	}

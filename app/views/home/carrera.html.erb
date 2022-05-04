@@ -1,0 +1,125 @@
+<% @current_news_story = 0  %>
+
+
+<div class="homepage-grid2">
+	
+	
+	<div class="home-boxes2">
+		<a href="/races/overview"><img style="width: 100%;" src="http://photos.grandprix.com/jpeg/homepage/austriangp18preview.jpg" /></a>
+	</div>
+	
+	
+	<div class="home-boxes2 withthumbnail">
+		<a href="/races/french-gp-2018-race-analysis.html"><img style="width: 100%;" src="http://photos.grandprix.com/jpeg/phc/pfra18/sun/start1-rg.jpg" /></a>
+
+		<span class="homepage-overlay"><h2 class="homepage"><a href="/races/french-gp-2018-race-analysis.html">Race Analysis</a> <cite>Dan Knutson</cite><br /><a href="/races/french-gp-2018-race-analysis.html">Points damage</a></h2></span>
+	</div>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+	<div style="padding-right: 0.5em; text-align:right;" class="home-boxes2">
+		<img src="/images/vasconcelos2.png" />
+		<h2><a href="/features/straight-talk/red-bulls-engine-conundrum-solved.html">Straight Talk</a> <cite>Luis Vasconcelos</cite><br /><a href="/features/straight-talk/red-bulls-engine-conundrum-solved.html">Red Bull's engine conundrum solved</a></h2>
+		<h4>The chances of Red Bull retaining Renault Power Units for next year are really slim - so slim they’re almost invisible. In the paddock there were clear signs the partnership that dominated Formula One between 2010 and 2013 is as good as broken.</h4>
+		
+		<a href="/features/straight-talk/red-bulls-engine-conundrum-solved.html">Full Story</a>.</h4>
+	</div>
+
+
+
+		<div style="padding-right: 0.5em; text-align:right;" class="home-boxes2">
+			
+			
+			
+			
+			<div id="columnfour">
+				<div class="home-boxes">
+					<a href="/races/overview"><img style="width: 100%;" src="../images/9881-honda-online-banner-white-300x200.jpg" /></a>
+				</div>
+			</div>
+		
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+		
+	</div>
+	
+	
+<div class="homepage-grid">
+	
+	
+	
+<% @stories.each do |story| %>
+	<% @current_news_story = @current_news_story + 1 %>
+	<% if @current_news_story < 16 %>
+	<div class="home-boxes<% unless story.legacy_photo.nil? %> withthumbnail"><% else %>"><% end %>
+		<% unless story.legacy_photo.nil? %>
+			<a href="<%= story.filename %>"><img src="<%= story.legacy_photo.display_photo %>" width="300" height="200" /></a>
+			<span class="homepage-overlay"><h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2></span>
+			<% else %>
+			<h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2>
+			<% end %>
+		</div>
+	<% end %>
+<% end %>
+</div>
+<br />
+<div class="homepage-grid">
+<% @current_news_story = 0  %>
+<div class="home-boxes">
+	<h4 class="homepage">RECENT NEWS</h4>
+<% @stories.each do |story| %>
+	<% @current_news_story = @current_news_story + 1 %>
+	<% if @current_news_story > 15 %>
+		<h4 class="homepage">• <a href="<%= story.filename %>"><%= story.headline %></a></h4>
+	<% end %>
+<% end %>
+
+<a href="/">More news</a>
+
+</div>
+
+<div class="home-boxes">
+<h4 class="homepage">FEATURES</h4>
+	<% @features.each do |feature| %>
+		<h4 class="homepage">• <a href="<%= feature.filename %>"><% if feature.category_id == 2 && feature.feature_type %><%= feature.feature_type + " - "%><% end %>
+		<%= feature.headline %></a></h4>		
+	<% end %>
+
+	</div>
+	
+
+	
+</div>

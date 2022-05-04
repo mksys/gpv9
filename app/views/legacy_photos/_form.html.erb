@@ -1,0 +1,78 @@
+<%= form_with(model: legacy_photo, local: true) do |form| %>
+  <% if legacy_photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(legacy_photo.errors.count, "error") %> prohibited this legacy_photo from being saved:</h2>
+
+      <ul>
+      <% legacy_photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :has_photo %>
+    <%= form.check_box :has_photo, id: :legacy_photo_has_photo, checked: (form.object.new_record? ? true : form.object.has_photo) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_thumbnail %>
+    <%= form.check_box :has_thumbnail, id: :legacy_photo_has_thumbnail, checked: (form.object.new_record? ? true : form.object.has_thumbnail) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :story_id %>
+    <%= form.number_field :story_id, id: :legacy_photo_story_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :display_photo %>
+    <%= form.text_field :display_photo, id: :legacy_photo_display_photo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thumbnail_photo %>
+    <%= form.text_field :thumbnail_photo, id: :legacy_photo_thumbnail_photo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :caption %>
+    <%= form.text_field :caption, id: :legacy_photo_caption %>
+  </div>
+
+  <div class="field">
+    <%= form.label :copyright %>
+    <%= form.text_field :copyright, id: :legacy_photo_copyright %>
+  </div>
+
+  <div class="field">
+    <%= form.label :display_photo_width %>
+    <%= form.number_field :display_photo_width, id: :legacy_photo_display_photo_width, value: (form.object.new_record? ? '1600' : form.object.display_photo_width) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :display_photo_height %>
+    <%= form.number_field :display_photo_height, id: :legacy_photo_display_photo_height, value: (form.object.new_record? ? '630' : form.object.display_photo_height) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thumbnail_photo_width %>
+    <%= form.number_field :thumbnail_photo_width, id: :legacy_photo_thumbnail_photo_width, value: (form.object.new_record? ? '300' : form.object.thumbnail_photo_width) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thumbnail_photo_height %>
+    <%= form.number_field :thumbnail_photo_height, id: :legacy_photo_thumbnail_photo_height, value: (form.object.new_record? ? '200' : form.object.thumbnail_photo_height) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_photo %>
+    <%= form.text_field :link_photo, id: :legacy_photo_link_photo %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

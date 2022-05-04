@@ -1,0 +1,19 @@
+<h1>Columns</h1>
+
+<% @stories.each do |story| %>
+  	<% unless story.legacy_photo.nil? %>
+<img style="float:left" src="<%= story.legacy_photo.thumbnail_photo %>" width="<%= story.legacy_photo.thumbnail_photo_width %>" height="<%= story.legacy_photo.thumbnail_photo_height %>" />
+	<% end %>
+	
+
+	<h2><a href="<%= story.filename %>"><% if story.category_id == 2 && story.feature_type %><%= story.feature_type + " - "%><% end %>
+	<%= story.headline %></a></h2>
+	<p><%= story.abstract %><br />Old link:<a href="<%= "http://www.grandprix.com/"%>
+	<% if story.category.number == 1 && story.template_id == 1 %>ns/<% end %>
+	<% if story.category.number == 1 && story.template_id == 2 %>race/<% end %>
+	<% if story.category.number == 2 && story.template_id == 3 %>ft/<% end %>
+	<% if story.category.number == 2 && story.template_id == 7 %>columns/maurice-hamilton/<% end %>
+	<% if story.category.number >= 3 %>gpe/<% end %>
+	<%= story.legacy_filename %>"><% if story.category_id == 2 && story.feature_type %><%= story.feature_type + " - "%><% end %><%= story.headline %></a><br />
+	</p>
+<% end %>

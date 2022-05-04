@@ -1,0 +1,10 @@
+<p>Tyres</p>
+
+<h1><%= @story.headline %></h1>
+<% unless @story.legacy_photo.nil? %>
+<img style="float:right" src="<%= @story.legacy_photo.display_photo %>" width="<%= @story.legacy_photo.display_photo_width %>" height="<%= @story.legacy_photo.display_photo_height %>" />
+<% end %>
+
+<p><%= raw @story.body %></p>
+<p><%= @story.body_html %></p>
+

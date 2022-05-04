@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Has photo:</strong>
+  <%= @legacy_photo.has_photo %>
+</p>
+
+<p>
+  <strong>Has thumbnail:</strong>
+  <%= @legacy_photo.has_thumbnail %>
+</p>
+
+<p>
+  <strong>Display photo:</strong>
+  <%= @legacy_photo.display_photo %>
+</p>
+
+<p>
+  <strong>Link photo:</strong>
+  <%= @legacy_photo.link_photo %>
+</p>
+
+<p>
+  <strong>Thumbnail photo:</strong>
+  <%= @legacy_photo.thumbnail_photo %>
+</p>
+
+<p>
+  <strong>Display photo width:</strong>
+  <%= @legacy_photo.display_photo_width %>
+</p>
+
+<p>
+  <strong>Display photo height:</strong>
+  <%= @legacy_photo.display_photo_height %>
+</p>
+
+<p>
+  <strong>Thumbnail photo width:</strong>
+  <%= @legacy_photo.thumbnail_photo_width %>
+</p>
+
+<p>
+  <strong>Thumbnail photo height:</strong>
+  <%= @legacy_photo.thumbnail_photo_height %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @legacy_photo.caption %>
+</p>
+
+<p>
+  <strong>Copyright:</strong>
+  <%= @legacy_photo.copyright %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @legacy_photo.story_id %>
+</p>
+
+<%= link_to 'Edit', edit_legacy_photo_path(@legacy_photo) %> |
+<%= link_to 'Back', legacy_photos_path %>

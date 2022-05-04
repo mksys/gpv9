@@ -1,0 +1,22 @@
+<p><%= paginate @stories %>
+<%= page_entries_info @stories %>
+</p>
+<h1>Latest Formula One News</h1>
+<div class="homepage-grid">
+
+<% @stories.each do |story| %>
+	<div class="home-boxes<% unless story.legacy_photo.nil? %> withthumbnail"><% else %>"><% end %>
+		<% unless story.legacy_photo.nil? %>
+			<a href="<%= story.filename %>"><img src="<%= story.legacy_photo.thumbnail_photo %>" width="300" height="200" /></a>
+			<span class="homepage-overlay"><h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2></span>
+			<% else %>
+			<h2 class="homepage"><a href="<%= story.filename %>"><%= story.headline.upcase %></a></h2>
+			<% end %>
+		</div>
+
+<% end %>
+</div>
+<p><%= paginate @stories %>
+<%= page_entries_info @stories %>
+</p>
+

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @current_race %>
+
+<div>
+  <%= link_to "Edit this current race", edit_current_race_path(@current_race) %> |
+  <%= link_to "Back to current races", current_races_path %>
+
+  <%= button_to "Destroy this current race", @current_race, method: :delete %>
+</div>

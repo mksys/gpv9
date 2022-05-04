@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-GB">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176118-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-176118-1');
+	</script>
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+	
+	<!-- Facebook Pixel Code -->
+	<script>
+	  !function(f,b,e,v,n,t,s)
+	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	  n.queue=[];t=b.createElement(e);t.async=!0;
+	  t.src=v;s=b.getElementsByTagName(e)[0];
+	  s.parentNode.insertBefore(t,s)}(window, document,'script',
+	  'https://connect.facebook.net/en_US/fbevents.js');
+	  fbq('init', '815807641915373');
+	  fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	  src="https://www.facebook.com/tr?id=815807641915373&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Facebook Pixel Code -->
+
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title><%= @site_title %></title>
+	<meta name="author" content="Grandprix.com" />
+	<meta name="copyright" content="&copy; 1988-2021 Inside F1, Inc." />
+	<meta name="description" content="<%= @site_description %>" />
+	<meta name="keywords" content="<%= @site_keywords %>" />
+	
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="alternate" type="application/rss+xml" title="Grandprix.com Current News" href="http://www.grandprix.com/feed?format=rss">
+	<meta name="theme-color" content="#ee2617">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans":400italic,600italic,800italic,400,600,800,300 />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Futura" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+	
+	<link rel="stylesheet" type="text/css" media="screen,projection" href="/css/stylesheet.css">
+	
+	<% if @story %>
+	<meta property="fb:app_id"          content="137261486299202" /> 
+	<meta property="og:url"                content="http://www.grandprix.com/<%= @story.filename %> " />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="<%= @story.headline %>" />
+	<meta property="og:description"        content="<%= @story.abstract %>" />
+	<% unless @story.legacy_photo.nil? %>
+		<meta property="og:image"              content="<%= @story.legacy_photo.display_photo %>" />
+	<% end %>
+	<% end %>
+</head> 
+<body>
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '137261486299202',
+	      xfbml      : true,
+	      version    : 'v2.12'
+	    });
+	    FB.AppEvents.logPageView();
+	  };
+
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "https://connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
+	
+	<header class="clear">
+	  <div class="logo"><a href="http://www.grandprix.com"><span>Grandprix.com</span></a></div>
+
+	    
+	</header>
+
+<%= render(partial: "/layouts/menu") %>
+<%= render(partial: "/layouts/general") %>
+	
+	<section class="content">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+	<% if notice %>
+	  <p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+	  <p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+
+    <%= yield %>
+	
+	
+	
+
+	</section>
+
+
+	<footer>
+	
+
+		<ul>
+			<li>&copy; <%= Time.current.year %> Inside F1 Inc</li>
+			<li><a href="/terms">Terms</a></li>
+			<li><a href="/copyright">Copyright</a></li>
+			<li><a href="/privacy">Privacy</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Advertise</a></li>
+		</ul>
+		
+		<div class="logo"><a href="http://www.grandprix.com"><span>Grandprix.com</span></a></div>
+
+	</footer>
+
+	<script type="text/javascript">
+	  var _sf_async_config = { uid: 2407, domain: 'grandprix.com', useCanonical: true };
+	  (function() {
+	    function loadChartbeat() {
+	      window._sf_endpt = (new Date()).getTime();
+	      var e = document.createElement('script');
+	      e.setAttribute('language', 'javascript');
+	      e.setAttribute('type', 'text/javascript');
+	      e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+	      document.body.appendChild(e);
+	    };
+	    var oldonload = window.onload;
+	    window.onload = (typeof window.onload != 'function') ?
+	      loadChartbeat : function() { oldonload(); loadChartbeat(); };
+	  })();
+	</script>
+	
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b7c3b86fcf48f8c"></script>	
+	
+</body>
+</html>

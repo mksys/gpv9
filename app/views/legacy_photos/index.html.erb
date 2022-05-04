@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Legacy Photos</h1>
+<%= link_to 'New Legacy Photo', new_legacy_photo_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Has photo</th>
+      <th>Has thumbnail</th>
+      <th>Display photo</th>
+      <th>Link photo</th>
+      <th>Thumbnail photo</th>
+      <th>Display photo width</th>
+      <th>Display photo height</th>
+      <th>Thumbnail photo width</th>
+      <th>Thumbnail photo height</th>
+      <th>Caption</th>
+      <th>Copyright</th>
+      <th>Story</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @legacy_photos.each do |legacy_photo| %>
+      <tr>
+        <td><%= legacy_photo.has_photo %></td>
+        <td><%= legacy_photo.has_thumbnail %></td>
+        <td><%= legacy_photo.display_photo %></td>
+        <td><%= legacy_photo.link_photo %></td>
+        <td><%= legacy_photo.thumbnail_photo %></td>
+        <td><%= legacy_photo.display_photo_width %></td>
+        <td><%= legacy_photo.display_photo_height %></td>
+        <td><%= legacy_photo.thumbnail_photo_width %></td>
+        <td><%= legacy_photo.thumbnail_photo_height %></td>
+        <td><%= legacy_photo.caption %></td>
+        <td><%= legacy_photo.copyright %></td>
+        <td><%= legacy_photo.story_id %></td>
+        <td><%= link_to 'Show', legacy_photo %></td>
+        <td><%= link_to 'Edit', edit_legacy_photo_path(legacy_photo) %></td>
+        <td><%= link_to 'Destroy', legacy_photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Legacy Photo', new_legacy_photo_path %>

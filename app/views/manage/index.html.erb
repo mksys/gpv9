@@ -1,0 +1,43 @@
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '137261486299202',
+      xfbml      : true,
+      version    : 'v2.12'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<p>Name: <%= @current_user %></p>
+
+
+<h2><%= link_to 'New Story', new_story_path %> | <%= link_to 'New GMM Story', new_story_path(:typeofstory => "GMM") %> | <%= link_to 'New Straight Talk', new_story_path(:typeofstory => "Straight Talk") %></h2>
+<br />
+
+
+
+
+<%= link_to "Create race pages" + @current_user_race_description, {:action=>"createracepages", :controller=>"manage"} %>
+	   
+	<br />
+<%= link_to "Create 2021 race_details", {:action=>"create2019racedetails", :controller=>"manage"} %>
+
+<p><%= link_to "Modify RaceDetails table", {:action=>"index", :controller=>"race_details"} %></p>
+
+
+<p><a href="/current_races/1/edit">Edit Current race to display"</a></p>
+
+<p><span class="fb-comments-count" data-href="http://www.grandprix.com/"></span>
+awesome comments</p>
+

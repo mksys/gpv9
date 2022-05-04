@@ -1,0 +1,2 @@
+module RaceDetailsHelper
+end

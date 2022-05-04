@@ -1,0 +1,23 @@
+<a href="/encyclopedia" class="button button-red">Overview</a>
+<a href="/race-archives" class="button button-red">Races</a>
+<a href="/drivers" class="button button-red">Drivers</a>
+<a href="/constructors" class="button button-red">Constructors</a>
+<a href="/circuits" class="button button-red">Circuits</a>
+<a href="/people" class="button button-red">People</a>
+<a href="/sponsors" class="button button-red">Sponsors</a>
+<a href="/engines" class="button button-black">Engines</a>
+<a href="/fuel" class="button button-red">Fuels</a>
+<a href="/tyres" class="button button-red">Tyres</a>
+
+<p>&nbsp;</p>
+
+<% @stories.each do |story| %>
+  	<% unless story.legacy_photo.nil? %>
+<img style="float:left" src="<%= story.legacy_photo.thumbnail_photo %>" width="<%= story.legacy_photo.thumbnail_photo_width %>" height="<%= story.legacy_photo.thumbnail_photo_height %>" />
+	<% end %>
+	
+
+	<h2><a href="<%= story.filename %>"><% if story.category_id == 2 && story.feature_type %><%= story.feature_type + " - "%><% end %>
+	<%= story.headline %></a></h2>
+	<p><%= story.abstract %>	</p>
+<% end %>

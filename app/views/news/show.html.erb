@@ -1,0 +1,67 @@
+
+
+	<p class="date"><%= @story.date_live_at.to_s(:gp_article).upcase %></p>
+
+	<h1 class="story-title"><%= @story.headline %></h1>
+
+			<div data-turbolinks="false"
+			  class="fb-like"
+			  data-share="true"
+			  data-width="450"
+			  data-show-faces="true">
+			</div>
+	<div class="clear"></div>
+
+		<div class="multicolumn">
+			<br />
+			
+			
+			<% unless @story.legacy_photo.nil? %>
+					<div class="story-photo">
+					<%= link_to image_tag(@story.legacy_photo.thumbnail_photo), display_photo_url(photo_url: @story.legacy_photo.display_photo, photo_caption: @story.legacy_photo.caption.html_safe, photo_copyright: @story.legacy_photo.copyright.html_safe) %>
+	
+<div class="story-photo-credits">				
+<div class="story-photo-caption"><%= @story.legacy_photo.caption.html_safe %><br /><%= @story.legacy_photo.copyright.html_safe %></div>
+	</div>	
+				</div>
+			
+				<% end %>
+			
+			
+			<%= raw @story.body %>
+		</div>
+			<p><%= @story.body_html %></p>
+
+
+	
+	
+			
+	<!-- Start todays news -->
+	<div id="wsw-todaysstories">
+	<div id="wsw-todaysstoriestitle">
+	Other stories for <%= @story.date_live_at.to_s(:gp_article).upcase %>
+	</div>
+	<% @other_stories.each do |other_story| %>
+		<h4><a href="<%= other_story.filename %>"><%= other_story.headline.upcase %></a></h4>
+	<% end %>
+		
+
+</div>
+		
+	<!-- End todays news -->
+
+		    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+		    <div data-turbolinks="false" class="addthis_inline_share_toolbox"></div>
+
+
+<div data-turbolinks="false" id="general-ad" class="clear">
+	<script type="text/javascript"><!--
+		e9 = new Object();
+	    e9.size = "728x90";
+	//--></script>
+	<script data-turbolinks="false" type="text/javascript" src="//tags.expo9.exponential.com/tags/GrandPrixcom/ROS/tags.js"></script>
+</div>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_relatedposts_inline"></div>
+
+

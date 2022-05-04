@@ -1,0 +1,1180 @@
+body {
+	padding: 20px;
+	background: #EEE;
+	color: #666666;
+}
+
+/* Structure ---------------------------------------------------------*/
+	
+	body > header,
+	body > nav,
+	body > section,
+	body > footer {
+		width: 940px;
+		margin: 0 auto;
+	}
+
+	body > section {
+		width: 960px;
+	}
+	
+	article,
+	ul,
+	ol,
+	p,
+	div,
+	form,
+	table {
+		margin-bottom: 20px;
+	}
+
+/* Forms ---------------------------------------------------------*/
+
+	form input:focus,
+	form textarea:focus {
+		outline: 0;
+	}
+
+	form input[type=text]:focus,
+	form input[type=password]:focus,
+	form textarea:focus {
+		border-color: #ff0066;
+	}
+
+	form input,
+	form textarea,
+	form select,
+	form button {
+		margin: 0;
+		font-weight: 500;
+	}
+
+	form button {
+		cursor: pointer;
+		display: block;
+		border: none;
+	}
+	
+	form input,
+	form textarea {
+		display: block;
+		padding: 5px 8px;
+		border: 1px solid #CCC;
+	}
+	
+	form div.selector {
+		float: left;
+		position: relative;
+		padding: 5px 22px 5px 12px;
+		margin: 0 10px 0 0;
+		background: #FFF url(../images/select.png) 100% 50% no-repeat;
+		border: 1px solid #CCC;
+	}
+	
+	form div.selector:hover {
+		background-color: #EFEFEF;
+	}
+	
+	form div.selector span {
+		display: block;
+	}
+	
+	form div.selector select {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 25px;
+		border: none;
+		background: none;
+	}
+	
+	form label {
+		font-size: 17px;
+		font-weight: 500;
+	}
+	
+	form ul li {
+		margin: 15px 0 0 0;
+	}
+
+	form ul li:first-child {
+		margin: 0;
+	}
+
+/* Grid ---------------------------------------------------------*/
+
+	.oneCol,
+	.twoCol
+	.threeCol {
+		float: left;
+	}
+
+	.oneCol {	
+		width: 300px;
+	}
+	
+	.twoCol {	
+		width: 620px;
+	}
+	
+	.threeCol {	
+		width: 940px;
+	}
+	
+	.clearBoth {
+		clear: both;
+	}
+
+/* Font ---------------------------------------------------------*/
+
+	body,
+	input,
+	select,
+	textarea,
+	button {
+		line-height: 125%;
+		font-size: 13px;
+		font-family: Arial, sans-serif;
+	}
+	
+	p,
+	textarea {
+		line-height: 150%;
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+/* Misc ---------------------------------------------------------*/
+
+	.alignRight {
+		text-align: right;
+	}
+
+/* Links ---------------------------------------------------------*/
+
+	a {
+		color: #666666;
+		text-decoration: underline;
+	}
+	a:hover,
+	a:focus {
+		color: #333;
+	}
+	
+	h1 a,
+	h2 a {
+		color: #cc0f09;
+		text-decoration: none;
+	}
+	
+	/* Button ---------------------------------------------------------*/
+
+		.button {
+			font-size: 14px;
+			line-height: 150%;
+			font-family: "Oswald";
+			text-transform: uppercase;
+			text-decoration: none;
+			display: block;
+			background: #CCC url(../images/button.png) 0 0 repeat-x;
+			border-radius: 30px;
+			padding: 6px 16px;
+			color: #333;
+			border: 1px solid #CCC;
+		}
+		
+		.button:hover,
+		.button:focus {
+			background: #FFF;
+		}
+
+/* Headings ---------------------------------------------------------*/
+	
+	h1,
+	h2,
+	h3 {
+		font-family: "Oswald";
+		text-transform: uppercase;
+	}
+	
+	h1 {
+		color: #333;
+		font-size: 50px;
+		line-height: 120%;
+		font-weight: 500;
+	}
+	
+	h1 span {
+		color: #CCC;
+	}
+	
+	h2 {
+		font-size: 20px;
+		line-height: 120%;
+		font-weight: 500;
+	}
+	
+	h3 {
+		font-size: 16px;
+		line-height: 120%;
+		font-weight: 500;
+	}
+
+	h1 a,
+	h2 a,
+	h3 a {
+		color: #cc0f09;
+		text-decoration: none;
+	}
+
+/* Lists ---------------------------------------------------------*/
+
+	ul {
+		margin-left: 20px;
+	}
+
+	ul li {
+		list-style: square;
+		margin-left: 16px;
+	}
+
+/* Definition Lists ---------------------------------------------------------*/
+
+	dl {
+		overflow: hidden;
+	}
+	
+	dl dt,
+	dl dd {
+		float: left;
+		width: 50%;
+	}
+	
+	dl dt {
+		font-weight: 500;
+	}
+	
+	dl dd {
+		text-align: right;
+	}
+	
+/* Table ---------------------------------------------------------*/
+
+	table {
+		width: 100%;
+	}
+	
+	table th,
+	table td {
+		padding: 5px;
+	}
+	
+	table td.time {
+		text-transform: none;
+	}
+
+/* Header ---------------------------------------------------------*/
+
+	body > header {
+		background: #cc0f09 url(../images/header.png) 0 0 repeat-x;
+		margin-bottom: 20px;
+	}
+	
+	/* Logo ---------------------------------------------------------*/
+	
+		header div.logo {
+			float: left;
+			margin: 20px;
+			width: 208px;
+			height: 50px;
+			background-image: url(../images/sprite.png);
+			background-repeat: no-repeat;
+		}
+		
+		body > header div.brought {
+			display:block
+			background-image: url(../images/honda6-white.png);
+			background-repeat: no-repeat;
+			width: 208px;
+			height: 48px;
+			direction: ltr;
+		}
+		body > header div.brought a {
+			display: inline-block;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;		}
+		
+		body > header div.brought a h1 {
+
+		}
+
+
+
+		body > header section.content p.text-move {
+			text-color: red;
+			font:500%;
+		}
+
+		header div.logo a {
+			display: block;
+			height: 50px;
+		}
+	
+		header div.logo span {
+			display: none;
+		}
+		
+	/* Search ---------------------------------------------------------*/
+	
+		header form {
+			position: relative;
+			float: left;
+			padding: 20px 20px 0 20px;
+			margin: 0;
+			width: 350px;
+		}
+		
+		header form label {
+			color: #ffcccc;
+			font-size: 15px;
+			font-family: "Oswald";
+			text-transform: uppercase;
+			display: block;
+			margin: 0 0 10px 0;
+		}
+		
+		header form input {
+			float: left;
+			width: 258px;
+			border: none;
+			margin-right: 10px;
+		}
+		
+		header form button {
+			float: left!important;
+			font-family: "Oswald";
+			text-transform: uppercase;
+			border-color: #EFEFEF!important;
+			padding: 2px 16px!important;
+		}
+	
+	/* Next Race ---------------------------------------------------------*/
+	
+		article#nextRace {
+			position: relative;
+			float: left;
+			padding: 20px;
+			margin: 0;
+			color: #ffcccc;
+			font-family: "Oswald";
+			text-transform: uppercase;
+		}
+		
+		article#nextRace h2 {
+			font-size: 15px;
+			margin: 0 0 7px 0;
+		}
+		
+		article#nextRace h3 {
+			font-size: 20px;
+			margin: 0;
+			color: #FFCCCC;
+		}
+
+		article#nextRace h3 a {
+			color: #FFF;
+		}
+
+		article#nextRace h2,
+		article#nextRace h3 {
+			margin-left: 80px;
+		}
+		
+		article#nextRace img {
+			opacity: .5;
+			position: absolute;
+			top: 15px;
+			left: 0;
+		}
+	
+/* Navigation ---------------------------------------------------------*/
+
+	body > nav {
+		font-family: "Oswald";
+		text-transform: uppercase;
+	}
+
+	body > nav ul {
+		text-align: center;
+		margin: 0;
+		padding: 10px 0 20px 0;
+	}
+
+	body > nav ul li {
+		list-style: none;
+		display: inline-block;
+		margin: 0 14px;
+		font-size: 18px;
+	}
+	
+	body > nav ul li a {
+		display: block;
+		color: #999;
+		text-decoration: none;
+	}
+	
+	body > nav ul li.selected a {
+		color: #333;
+	}
+
+/* Content ---------------------------------------------------------*/
+	
+	body > section {
+		overflow: hidden;
+	}
+	
+	body > section > nav,
+	body > section > aside,
+	body > section > article,
+	body > section > section > article {
+		float: left;
+		margin: 10px;
+	}
+	
+	body > section > aside {
+		margin-bottom: 0;
+	}
+	
+	body > section > aside > article > div,
+	body > section > article > div,
+	body > section > section > article > div {
+		padding: 15px 20px;
+	}
+	
+	body > section.advert {
+		text-align: center;
+		margin: 0 auto 20px auto;
+	}
+
+/* Pagination ---------------------------------------------------------*/
+
+	nav.pagination ul {
+		margin: 0 10px 10px 10px;
+		padding: 10px 10px 20px 10px;
+		overflow: hidden;
+	}
+	
+	nav.pagination ul li {
+		margin: 0;
+		list-style: none;
+	}
+	
+	nav.pagination ul li.newer {
+		float: left;
+	}
+
+	nav.pagination ul li.older {
+		float: right;
+	}
+
+/* Timeline ---------------------------------------------------------*/
+
+	form.timeline {
+		position: absolute;
+		top: 35px;
+		right: 20px;
+		overflow: visible;
+		margin: 0;
+	}
+
+	form.timeline button {
+		display: inline;
+	}
+
+	form.timeline button {
+		padding: 3px 16px 3px 16px;
+	}
+	
+	form.timeline div.selector {
+		width: 40px;
+	}
+	
+	form.timeline div.selector:first-child {
+		width: 75px;
+	}
+
+/* Stories ---------------------------------------------------------*/
+	
+	article.stories {
+		position: relative;
+		background: #FFF;
+	}
+
+	article.stories > div {
+		position: relative;
+		z-index: 1;
+		background: #FFF;
+	}
+	
+	article.stories h2 {
+		margin: 40px 0;
+	}
+	
+	article.stories h3 {
+		margin: 20px 0 40px 0;
+	}
+	
+	article.stories h3 {
+		margin: 20px 0 40px 0;
+	}
+
+	article.stories > div ul {
+		overflow: hidden;
+		margin: 0;
+	}
+
+	article.stories > div ul li {
+		list-style: none;
+		min-height: 80px;
+		position: relative;
+		margin: 20px 0 0 0;
+		padding: 20px 0 0 0;
+		border-top: 1px solid #EFEFEF;
+	}
+	
+	article.stories > div ul li:first-child {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	
+	article.stories > div ul li img {
+		position: absolute;
+		top: 22px;
+		left: 0;
+	}
+
+	article.stories > div ul li:first-child img {
+		top: 2px;
+	}
+
+	article.stories > div ul li h3,
+	article.stories > div ul li p {
+		margin: 0 0 0 120px;
+	}
+
+	article.stories > div ul li h3 {
+		margin-bottom: 10px;
+	}
+	
+/* Story ---------------------------------------------------------*/
+
+	article.story {
+		position: relative;
+		background: #FFF;
+		height: 250px;
+	}
+
+	article.story a {
+		text-decoration: none;
+		color: #cc0f09;
+	}
+	
+	article.story a:hover,
+	article.story a:focus {
+		color: #333;
+	}
+
+	article.story div {
+		position: relative;
+		z-index: 1;
+		background: #FFF;
+		padding: 15px 20px;
+	}
+
+	article.story > a > div > p {
+		display: none;
+		margin: 15px 0 0 0;
+		padding: 15px 0 0 0;
+		border-top: 1px solid #EFEFEF;
+		color: #666666;
+	}
+
+	article.story.noImage > a > div > p,
+	article.story:hover > a > div > p {
+		display: block;
+	}
+
+	article.story img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+	article.featured h1,
+	article.featured p {
+		margin: 0 300px 0 0;
+	}
+
+	article.featured h1 {
+		padding-bottom: 15px;
+		border-bottom: 1px solid #EFEFEF;
+	}
+	
+	article.featured p {
+		margin-top: 15px;
+	}
+	
+	article.featured div {
+		position: static;
+		border: none;
+	}
+	
+	article.featured img {
+		left: auto;
+		right: 0;
+	}
+	
+	article.mini {
+		height: 80px;
+	}
+	
+	article.full {
+		padding: 20px;
+		margin: 0 0 10px 0;
+		height: auto;
+	}
+	
+	article.full div {
+		padding: 0;
+	}
+	
+	article.full h2 {
+		margin: 40px 0;
+	}
+	
+	article.full h3 {
+		margin: 20px 0;
+	}
+	
+	article.full h3 cite {
+		color: #999;
+	}
+	
+	article.full p.intro {
+		color: #333;
+		font-size: 18px;
+	}
+	
+	div.photo {
+		padding: 0;
+		font-size: 10px;
+		color: #999;
+	}
+
+	div.photo.right {
+		width: 290px;
+		float: right;
+		margin: 4px 0 10px 20px;
+	}
+
+	div.photo.left {
+		width: 290px;
+		float: left;
+		margin: 4px 20px 10px 0;
+	}
+	
+	div.photo img {
+		position: static;
+	}
+	
+/* Column ---------------------------------------------------------*/
+
+	article.column {
+		height: 190px;
+		position: relative;
+		background: #FFF;
+	}
+
+	article.column h2 {
+		margin-bottom: 15px;
+	}
+
+	article.column h2,
+	article.column p {
+		margin-left: 140px;
+	}
+
+	article.column p {
+		border-top: 1px solid #EFEFEF;
+		padding-top: 15px;
+	}
+
+	article.column img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
+/* Store ---------------------------------------------------------*/
+
+	article.store {
+		height: 190px;
+		position: relative;
+		background: #FFF url(../images/temp_store.png) 0 100% no-repeat;
+	}
+
+	article.store a {
+		display: block;
+		height: 100%;
+		text-decoration: none;
+		color: #cc0f09;
+	}
+
+	article.store a:hover,
+	article.store a:focus {
+		color: #333;
+	}
+
+	article.store a:hover .button,
+	article.store a:focus .button {
+		background: #FFF;
+	}
+	
+	article.store div {
+		padding: 15px 20px;
+	}
+	
+	article.store h2 {
+		margin-bottom: 15px;
+	}
+	
+	article.store .button {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		border-color: #EFEFEF!important;
+	}
+	
+/* List ---------------------------------------------------------*/
+
+	article.list {
+		position: relative;
+		background: #FFF;
+		height: 340px;
+	}
+	
+	article.list h2 {
+		margin-bottom: 15px;
+	}
+	
+	article.list ul {
+		margin: 0;
+	}
+	
+	article.list li {
+		margin-top: 12px;
+	}
+
+	article.list li:first-child {
+		margin-top: 0;
+	}
+
+/* Photos ---------------------------------------------------------*/
+	
+	article.photos ul {
+		overflow: hidden;
+		margin: 0 -10px -20px -10px;
+	}
+
+	article.photos ul li {
+		float: left;
+		margin: 0 10px 20px 10px;
+		list-style: none;
+	}
+
+	article.photos ul li img {
+		display: block;
+	}
+	
+/* Advert ---------------------------------------------------------*/
+	
+	article.advert ul {
+		margin: 0;
+	}
+	
+	article.advert ul li {
+		display: block;
+		margin: 20px 0 0 0;
+	}
+
+	article.advert ul li:first-child {
+		margin: 0;
+	}
+	
+	article.advert ul li img {
+		display: block;
+	}
+	
+/* Social ---------------------------------------------------------*/
+	
+	article.social {
+		background: #FFF;
+	}
+	
+	iframe.twitter-share-button,
+	iframe.fb_ltr {
+		vertical-align: middle!important;
+	}
+
+	iframe.twitter-share-button {
+		margin-right: 15px;
+	}
+
+/* Encyclopaedia ---------------------------------------------------------*/
+	
+	article.encyclopaedia {
+		position: relative;
+		background: #333;
+	}
+
+	article.encyclopaedia a {
+		display: block;
+		height: 100%;
+		text-decoration: none;
+		color: #FFF;
+	}
+	
+	article.encyclopaedia a:hover .button,
+	article.encyclopaedia a:focus .button {
+		background: #FFF;
+	}
+
+	article.encyclopaedia div {
+		padding: 15px 20px;
+		background: rgba(0,0,0,.6);
+	}
+
+	article.encyclopaedia h2 a {
+		color: #FFF;
+	}
+
+	article.encyclopaedia h2 span {
+		color: #CCC;
+	}
+	
+	article.encyclopaedia .button {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		border-color: #EFEFEF!important;
+	}
+	
+/* Race Hub ---------------------------------------------------------*/
+
+	article.raceHub {
+		overflow: hidden;
+		background: #333;
+	}
+
+	article.raceHub > div {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	article.raceHub h2 {
+		color: #FFF;
+		margin: 0 0 10px 0;
+	}
+
+	article.raceHub h2 a {
+		color: #FFF;
+	}
+
+	article.raceHub h2 span {
+		color: #999;
+	}
+
+	article.raceHub table {
+		margin: 0;
+		padding: 5px 0 0 0;
+		color: #FFF;
+		text-transform: uppercase;
+	}
+
+	article.raceHub table tr td:first-child {
+		color: #999;
+	}
+
+	article.raceHub table th,
+	article.raceHub table td {
+		padding: 5px 0;
+	}
+
+	article.raceHub ul {
+		overflow: hidden;
+		background: #3d3d3d url(../images/split.png) 50% 0 repeat-x;
+		margin: 10px -30px 0 -30px;
+		padding: 10px 0 18px 0;
+	}
+	
+	article.raceHub ul li {
+		float: left;
+		list-style: none;
+		margin: 10px 0 0 15px;
+	}
+	
+	article.raceHub ul li a {
+		display: block;
+		text-decoration: none;
+		color: #FFF;
+	}
+
+	article.raceHub ul li a:hover,
+	article.raceHub ul li a:focus {
+		opacity: .75;
+	}
+	
+	article.raceHub ul li.disabled a,
+	article.raceHub ul li.disabled a:hover,
+	article.raceHub ul li.disabled a:focus {
+		opacity: .20;
+		cursor: default;
+	}
+	
+	article.raceHub ul li span {
+		display: inline-block;
+	}
+	
+	article.raceHub ul li strong {
+		display: block;
+		text-align: center;
+		font-weight: normal;
+	}
+	
+	article.raceHub .icon {
+		width: 86px;
+		height: 46px;
+		background-image: url(../images/sprite.png);
+		background-repeat: no-repeat;
+	}
+	
+	article.raceHub .notes {
+		background-position: 0 -75px;
+	}
+	
+	article.raceHub .results {
+		background-position: -86px -75px;
+	}
+	
+	article.raceHub .press {
+		background-position: -172px -75px;
+	}
+	
+	article.raceHub .report {
+		background-position: -258px -75px;
+	}
+	
+	article.raceHub .quotes {
+		background-position: -344px -75px;
+	}
+	
+	article.raceHub .photos {
+		background-position: -430px -75px;
+	}
+	
+	article.raceHub.raceOver {
+		position: relative;
+		height: 190px;
+	}
+	
+	article.raceHub.raceOver a {
+		display: block;
+		height: 100%;
+		text-decoration: none;
+		color: #FFF;
+	}
+
+	article.raceHub.raceOver div {
+		position: relative;
+		z-index: 1;
+		background: #333;
+		padding: 15px 20px;
+	}
+
+	article.raceHub.raceOver div h2 {
+		margin: 0;
+		color: inherit;
+	}
+
+	article.raceHub.raceOver img {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	article.raceHub.raceOver a:hover .button,
+	article.raceHub.raceOver a:focus .button {
+		background: #FFF;
+	}
+	
+	article.raceHub.raceOver .button {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		z-index: 1;
+		border-color: #EFEFEF!important;
+	}
+
+/* Race List ---------------------------------------------------------*/
+
+	nav.raceList {
+		margin: 10px auto;
+		position: relative;
+	}
+
+	nav.raceList div.overflow {
+		overflow: hidden;
+		margin: 0;
+	}
+
+	nav.raceList ul.tracks {
+		position: relative;
+		z-index: 1;
+		background: #3D3D3D;
+		margin: 0;
+		padding: 0;
+		width: 3000px;
+		overflow: hidden;
+	}
+
+	nav.raceList ul.tracks li {
+		float: left;
+		margin: 0;
+		list-style: none;
+		border-right: 1px dashed rgba(255,255,255,.1);
+	}
+	
+	nav.raceList ul.tracks li a {
+		opacity: .25;
+		padding: 15px 20px;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	nav.raceList ul.tracks li a h2 {
+		color: #FFF;
+		font-size: 15px;
+		margin: 5px 0 0 0;
+	}
+	
+	nav.raceList ul.tracks li.active a {
+		opacity: 1;
+	}
+	
+	nav.raceList ul.tracks li.selected a {
+		opacity: 1;
+		background-color: #333;
+	}
+
+	nav.raceList ul.tracks li.active h2 {
+		color: #FFF;
+	}
+	
+	/* Pagination ---------------------------------------------------------*/
+
+		nav.raceList ul.pagination {
+			margin: 0;
+			padding: 0;
+		}
+
+		nav.raceList ul.pagination li {
+			z-index: 0;
+			margin: 0;
+			list-style: none;
+		}
+
+		nav.raceList ul.pagination li a {
+			display: block;
+			padding: 0 5px 10px 5px;
+			font-size: 50px;
+			line-height: 30px;
+		}
+
+		nav.raceList ul.pagination li span {
+			display: none;
+		}
+		
+		nav.raceList ul.pagination li.previous {
+			position: absolute;
+			left: -35px;
+			top: 50%;
+			margin: -15px 0 0 0;
+		}
+		
+		nav.raceList ul.pagination li.next {
+			position: absolute;
+			right: -35px;
+			top: 50%;
+			margin: -15px 0 0 0;
+		}
+	
+/* Race Info ---------------------------------------------------------*/
+	
+	article.raceInfo {
+		height: 800px;
+		background: #FFF;
+	}
+	
+/* Footer ---------------------------------------------------------*/
+
+	body > footer {
+		position: relative;
+	}
+
+	body > footer section {
+		text-align: center;
+		padding: 20px 0;
+		margin: 10px 0 0 0;
+		border-top: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+	}
+
+	body > footer ul {
+		overflow: hidden;
+		margin: 0;
+		padding-top: 20px;
+	}
+
+	body > footer ul li {
+		float: left;
+		list-style: none;
+		margin-left: 20px;
+	}
+	
+	body > footer ul li:first-child {
+		margin: 0;
+	}
+	
+	/* Logo ---------------------------------------------------------*/
+	
+		footer div.logo {
+			position: absolute;
+			bottom: -15px;
+			right: 0;
+			margin: 15px 0;
+			width: 105px;
+			height: 24px;
+			background-image: url(../images/sprite.png);
+			background-repeat: no-repeat;
+			background-position: 0 -51px;
+		}
+	
+		footer div.logo span {
+			display: none;
+		}

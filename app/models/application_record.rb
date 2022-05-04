@@ -1,3 +1,1 @@
-class ApplicationRecord < ActiveRecord::Base
-  primary_abstract_class
-end
+../../../gpv8-v003/app/models/application_record.rb

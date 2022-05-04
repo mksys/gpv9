@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Race Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="4"></th>
+      <th>id</th>
+      <th>Number</th>
+      <th>Round</th>
+      <th>Total laps</th>
+      <th>Year</th>
+      <th>Race name</th>
+      <th>Race name gp</th>
+      <th>Circuit</th>
+      <th>Circuit length</th>
+      <th>Race date on</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @race_details.each do |race_detail| %>
+      <tr>
+        <td><%= link_to 'Show', race_detail %></td>
+        <td><%= link_to 'Edit', edit_race_detail_path(race_detail) %></td>
+        <td><%= link_to 'Destroy', race_detail, method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;</td>
+		
+        <td><strong><%= race_detail.id %></strong></td>
+        <td><%= race_detail.number %></td>
+        <td><%= race_detail.round %></td>
+        <td><%= race_detail.total_laps %></td>
+        <td><%= race_detail.year %></td>
+        <td><%= race_detail.race_name %></td>
+        <td><%= race_detail.race_name_gp %></td>
+        <td><%= race_detail.circuit %></td>
+        <td><%= race_detail.circuit_length %></td>
+        <td><%= race_detail.race_date_on %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Race Detail', new_race_detail_path %>

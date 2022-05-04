@@ -1,0 +1,79 @@
+
+	<section class="content">
+	
+		<article class="twoCol stories">
+		
+			<div>
+			
+					<% flash.each do |name, msg| %>
+					  <%= content_tag :div, msg, :id => "#{name}" %>
+					<% end %>
+
+				<%= yield %>
+			
+			
+			
+
+			</div>
+			
+			<nav class="pagination">
+				<ul>
+					<li class="newer"><a href="#" class="button">&larr; April 2011</a></li>
+					<li class="older"><a href="#" class="button">February 2011 &rarr;</a></li>
+				</ul>
+			</nav>
+			
+		</article>
+	
+		<article class="raceHub raceOver oneCol">
+			
+			<a href="races.html">
+		
+				<div>
+			
+					<h2>Australian GP <span>Dashboard</span></h2>
+					
+				</div>
+			
+				<span class="button">Results, Photos and more</span>
+			
+				<img src="images/temp_06.png" />
+			
+			</a>
+		
+		</article>
+		
+		<article class="advert oneCol">
+		
+			<img src="http://placehold.it/300x250/333/FFF/" />
+		
+		</article>
+		
+		<article class="store oneCol">
+		
+			<a href="#">
+		
+				<div>
+			
+					<h2>Grandprix.com Store</h2>
+	
+				</div>
+			
+				<span class="button">Browse Store</span>
+		
+			</a>
+		
+		</article>
+		
+		<article class="advert oneCol">
+
+			<ul>
+				<li><img src="http://placehold.it/300x100/333/FFF/" /></li>
+				<li><img src="http://placehold.it/300x100/333/FFF/" /></li>
+				<li><img src="http://placehold.it/300x100/333/FFF/" /></li>
+			</ul>
+		
+		</article>
+	
+	</section>
+
